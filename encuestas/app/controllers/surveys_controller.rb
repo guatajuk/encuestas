@@ -41,6 +41,6 @@ class SurveysController < ApplicationController
     end
 
     def survey_params
-      params.require(:survey).permit(:details, :deadline)
+      params.require(:survey).permit(:name, :deadline, :survey_type_id)
     end
 end

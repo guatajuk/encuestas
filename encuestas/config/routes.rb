@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :survey_types
+
   resources :surveys
 
   resources :questions

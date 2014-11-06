@@ -1,5 +1,8 @@
 class Survey
   include Mongoid::Document
-  field :details, type: String
+  field :name, type: String
   field :deadline, type: Date
+
+  belongs_to :survey_type
+
 end
