@@ -42,3 +42,6 @@ gem 'kaminari', '~> 0.16.1'
 
 # Diagrama de clase extraido de controladores y modelos
 gem 'railroady'
+
+#Requerida por OpenShift
+gem 'rake', '~> 10.3.2'
