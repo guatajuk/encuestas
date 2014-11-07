@@ -1,7 +1,31 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#Evaluación al profesor por parte de los estudiantes
+
+Question.create(item: "Demuestra dominio en el manejo de los temas que trata", aspect: "Conocimiento")
+Question.create(item: "Utiliza los conceptos propios de la asignatura", aspect: "Conocimiento")
+Question.create(item: "Responde con claridad a las preguntas formuladas por los estudiantes", aspect: "Conocimiento")
+Question.create(item: "Relaciona los contenidos del curso con otras áreas del conocimiento", aspect: "Conocimiento")
+
+Question.create(item: "Mantiene el interés de sus alumnos por los temas de la asignatura", aspect: "Metología")
+Question.create(item: "Destaca las ideas principales de los temas", aspect: "Metología")
+Question.create(item: "Formula preguntas que inducen al estudiante a razonar", aspect: "Metología")
+Question.create(item: "Orienta al estudiante en la búsqueda de respuestas", aspect: "Metología")
+Question.create(item: "Es claro al presentar la información, facilitando el aprendizaje al alumno", aspect: "Metología")
+Question.create(item: "Recomienda referencias bibliográficas acordes con los temas de estudio", aspect: "Metología")
+Question.create(item: "Estimula la participación del estudiante en clase por medio de talleres, grupos de estudio, exposiciones etc.", aspect: "Metología")
+Question.create(item: "La exposición de los temas es ordenada y responde a la dinámica del curso", aspect: "Metología")
+Question.create(item: "Utiliza diversos sistemas educativos distintos a las clase magistral", aspect: "Metología")
+Question.create(item: "Fomenta en los estudiantes el uso del vocabulario propio de la asignatura", aspect: "Metología")
+Question.create(item: "Mantiene el control de la clase", aspect: "Metología")
+Question.create(item: "Cumple con el programa propuesto", aspect: "Metología")
+Question.create(item: "Cumple las normas y criterios de evaluación establecidos en el programa y convenios con los estudiantes", aspect: "Metología")
+Question.create(item: "Analiza con los estudiantes los resultados de las evaluaciones", aspect: "Metología")
+Question.create(item: "Motiva a los estudiantes a realizar las prácticas o talleres y presta asesoría oportuna", aspect: "Metología")
+Question.create(item: "Facilita la elaboración de guías apropiadas para el desarrollo del trabajo práctico", aspect: "Metología")
+Question.create(item: "Existe correspondencia entre la información teórica y el trabajo práctico", aspect: "Metología")
+Question.create(item: "Estimula el análisis y la reflexión sobre el trabajo práctico", aspect: "Metología")
+
+Question.create(item: "Cumple con los compromisos académicos adquiridos con los estudiantes", aspect: "Relaciones Universitarias")
+Question.create(item: "Mantiene una relación respetuosa con los estudiantes", aspect: "Relaciones Universitarias")
+Question.create(item: "Motiva a la participación de eventos académicos de la universidad: conferencias, foros, seminarios, etc.", aspect: "Relaciones Universitarias")
+Question.create(item: "Se interesa en contribuir a la formación integral del estudiantes", aspect: "Relaciones Universitarias")
+Question.create(item: "Mantiene una actitud responsable en el trabajo", aspect: "Relaciones Universitarias")

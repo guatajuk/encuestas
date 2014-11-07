@@ -39,8 +39,5 @@ gem 'mongoid_slug', '~> 3.2.1'
 # kaminari paginator
 gem 'kaminari', '~> 0.16.1'
 
-# Date Time Picker
-gem 'momentjs-rails', '>= 2.8.1'
-
 # Diagrama de clase extraido de controladores y modelos
 gem 'railroady'
