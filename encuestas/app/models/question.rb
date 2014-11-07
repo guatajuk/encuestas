@@ -5,4 +5,6 @@ class Question
   field :item, type: String
   field :aspect, type: String
 
+  belongs_to :survey
+
 end
