@@ -37,7 +37,7 @@ Question.create(item: "Comparte información, experiencias de trabajo etc", aspe
 Question.create(item: "Aporta ideas, plantea problemas de investigación relativos a su área", aspect: "Conocimiento")
 Question.create(item: "Demuestra interés en utilizar bibliografía actualizada", aspect: "Conocimiento")
 
-Question.create(item: "Orienta la asignatura en función de los objetivos del área y plan de estudios de la carrera", aspect: "")
+Question.create(item: "Orienta la asignatura en función de los objetivos del área y plan de estudios de la carrera", aspect: "Metología")
 Question.create(item: "Presenta el programa en una estructura lógica, acorde con los objetivos del mismo", aspect: "Metología")
 Question.create(item: "Presenta el programa en una estructura lógica, acorde con los objetivos del mismo", aspect: "Metología")
 Question.create(item: "Desarrolla el programa en forma secuencial, y acorde con los objetivos del mismo", aspect: "Metología")
