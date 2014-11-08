@@ -41,6 +41,6 @@ class QuestionsController < ApplicationController
     end
 
     def question_params
-      params.require(:question).permit(:item, :aspect)
+      params.require(:question).permit(:item, :aspect_id)
     end
 end
