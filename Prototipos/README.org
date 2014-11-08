@@ -1,0 +1,3 @@
+* Prototipos, sketchs, mockups
+
+- En esta carpeta se van a dejar las ideas de navegación y/o estrutura del proyecto en relación con la interfaza de usuario para los actores que son el estudiante, el docente, el director de departamento, y el administrador del sistema.
