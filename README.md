@@ -1,4 +1,5 @@
 Sistema de Evaluación Universitario (SEU)
+==============================================
 
 # Instalación
 
@@ -7,23 +8,21 @@ Sistema de Evaluación Universitario (SEU)
 
 # Caracteristicas
 
-    Version de Ruby : 
+> Version de Ruby : 
 
-    Dependencias del sistema
+> Dependencias del sistema
 
-    Configuración
+> Configuración
 
-    Creación de la base de datos
+> Creación de la base de datos
 
-    Inicialización de la base de datos
+> Inicialización de la base de datos
 
-    Para correr la aplicación se ejecuta : rails server
+> Para correr la aplicación se ejecuta : rails server
 
-    Servicios ( tareas pendientes, motores de busqueda, etc.)
+> Servicios ( tareas pendientes, motores de busqueda, etc.)
 
-    Instrucciónes de Desarrollo
-
-    …
+> Instrucciónes de Desarrollo
 
 # Información
 
