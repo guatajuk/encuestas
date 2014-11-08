@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :aspects
+
   get 'principal/index'
 
   resources :survey_types
