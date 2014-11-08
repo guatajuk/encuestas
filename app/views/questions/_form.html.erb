@@ -1,19 +1,21 @@
 <%= form_for @question, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :item, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :item, :class => 'text_field' %>
+  <div class="col-md-4">
+    <div class="control-group">
+      <%= f.label :item, :class => 'control-label' %>
+      <div class="controls">
+	<%= f.text_field :item, :class => 'text_field form-control' %>
+      </div>
     </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :aspect, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :aspect, :class => 'text_field' %>
+    <div class="control-group">
+      <%= f.label :aspect, :class => 'control-label' %>
+      <div class="controls">
+	<%= f.text_field :aspect, :class => 'text_field form-control' %>
+      </div>
     </div>
-  </div>
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                questions_path, :class => 'btn' %>
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+        questions_path, :class => 'btn btn-danger' %>
+    </div>
   </div>
 <% end %>

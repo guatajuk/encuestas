@@ -68,7 +68,7 @@
           <%= yield %>
         </div>
       </div><!--/row-->
-<div class="clearfix visible-xs-block"></div>
+      <div class="clearfix visible-xs-block"></div>
       <footer style="text-align: center;">
         <p>&copy; Sistema de Evaluación Universitario - 2014</p>
       </footer>

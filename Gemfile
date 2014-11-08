@@ -23,7 +23,7 @@ gem 'spring', '~> 1.1.3'
 gem 'mongoid', '~> 4.0.0'
 
 # Bootstrap
-gem 'twitter-bootstrap-rails', '~> 2.2.8'
+gem 'twitter-bootstrap-rails', :github => 'seyhunak/twitter-bootstrap-rails', :branch => 'bootstrap3'
 
 # Devise
 gem 'devise', '~> 3.4.0'
@@ -45,3 +45,8 @@ gem 'railroady'
 
 #Requerida por OpenShift
 gem 'rake', '~> 10.3.2'
+
+# Savon - Heavy metal SOAP client
+gem 'savon', '~> 2.3.0'
+
+

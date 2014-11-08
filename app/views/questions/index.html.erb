@@ -2,6 +2,7 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+<div class="col-md-10">
 <table class="table table-striped">
   <thead>
     <tr>
@@ -17,17 +18,19 @@
         <td><%= question.aspect %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_question_path(question), :class => 'btn btn-mini' %>
+                      edit_question_path(question), :class => 'btn btn-success' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       question_path(question),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
+                      :class => 'btn btn-danger' %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+<div class="clearfix visible-xs-block"></div>
 <%= paginate @questions %>
 
 <%= link_to t('.new', :default => t("helpers.links.new")),
