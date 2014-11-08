@@ -8,7 +8,6 @@ class Survey
 	validates_uniqueness_of :name
 	validates_presence_of :name, :deadline
 
-
   has_many :questions
   belongs_to :survey_type
 
