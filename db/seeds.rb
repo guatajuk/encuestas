@@ -1,81 +1,80 @@
-#Evaluación al profesor por parte de los estudiantes
+# encoding: utf-8
 
-Question.create(item: "Demuestra dominio en el manejo de los temas que trata", aspect: "Conocimiento")
-Question.create(item: "Utiliza los conceptos propios de la asignatura", aspect: "Conocimiento")
-Question.create(item: "Responde con claridad a las preguntas formuladas por los estudiantes", aspect: "Conocimiento")
-Question.create(item: "Relaciona los contenidos del curso con otras áreas del conocimiento", aspect: "Conocimiento")
+question_list =[
+                #Evaluación al profesor por parte de los estudiantes
+                ["Conocimiento","Demuestra dominio en el manejo de los temas que trata"],
+                ["Conocimiento","Utiliza los conceptos propios de la asignatura"],
+                ["Conocimiento","Responde con claridad a las preguntas formuladas por los estudiantes"],
+                ["Conocimiento","Relaciona los contenidos del curso con otras áreas del conocimiento"],
+                ["Metología","Mantiene el interés de sus alumnos por los temas de la asignatura"],
+                ["Metología","Destaca las ideas principales de los temas"],
+                ["Metología","Formula preguntas que inducen al estudiante a razonar"],
+                ["Metología","Orienta al estudiante en la búsqueda de respuestas"],
+                ["Metología","Es claro al presentar la información, facilitando el aprendizaje al alumno"],
+                ["Metología","Recomienda referencias bibliográficas acordes con los temas de estudio"],
+                ["Metología","Estimula la participación del estudiante en clase por medio de talleres, grupos de estudio, exposiciones etc."],
+                ["Metología","La exposición de los temas es ordenada y responde a la dinámica del curso"],
+                ["Metología","Utiliza diversos sistemas educativos distintos a las clase magistral"],
+                ["Metología","Fomenta en los estudiantes el uso del vocabulario propio de la asignatura"],
+                ["Metología","Mantiene el control de la clase"],
+                ["Metología","Cumple con el programa propuesto"],
+                ["Metología","Cumple las normas y criterios de evaluación establecidos en el programa y convenios con los estudiantes"],
+                ["Metología","Analiza con los estudiantes los resultados de las evaluaciones"],
+                ["Metología","Motiva a los estudiantes a realizar las prácticas o talleres y presta asesoría oportuna"],
+                ["Metología","Facilita la elaboración de guías apropiadas para el desarrollo del trabajo práctico"],
+                ["Metología","Existe correspondencia entre la información teórica y el trabajo práctico"],
+                ["Metología","Estimula el análisis y la reflexión sobre el trabajo práctico"],
+                ["Relaciones Universitarias","Cumple con los compromisos académicos adquiridos con los estudiantes"],
+                ["Relaciones Universitarias","Mantiene una relación respetuosa con los estudiantes"],
+                ["Relaciones Universitarias","Motiva a la participación de eventos académicos de la universidad: conferencias, foros, seminarios, etc."],
+                ["Relaciones Universitarias","Se interesa en contribuir a la formación integral del estudiantes"],
+                ["Relaciones Universitarias","Mantiene una actitud responsable en el trabajo"],
+                #Evaluación al profesor por parte del director del departamento
+                ["Conocimiento","Demuestra actualización en los conocimientos de su área"],
+                ["Conocimiento","Comparte información, experiencias de trabajo etc"],
+                ["Conocimiento","Aporta ideas, plantea problemas de investigación relativos a su área"],
+                ["Conocimiento","Demuestra interés en utilizar bibliografía actualizada"],
+                ["Metología","Orienta la asignatura en función de los objetivos del área y plan de estudios de la carrera"],
+                ["Metología","Presenta el programa en una estructura lógica, acorde con los objetivos del mismo"],
+                ["Metología","Presenta el programa en una estructura lógica, acorde con los objetivos del mismo"],
+                ["Metología","Desarrolla el programa en forma secuencial, y acorde con los objetivos del mismo"],
+                ["Metología","La metodología del trabajo corresponde a las características del grupo"],
+                ["Metología","La metodología del trabajo corresponde a las características de la temática del área"],
+                ["Metología","Se autoevalúa para mejorar su actividad como docente"],
+                ["Metología","Actualiza periódicamente sus programas y clases en contenidos, metodología y bibliografía"],
+                ["Metología","El sistema evaluativo es coherente con las formas metodológicas empleadas"],
+                ["Cumplimiento de labores","Presenta el plan y el informe de actividades"],
+                ["Cumplimiento de labores","Es responsable y cumplido en los trabajos que se le asignan"],
+                ["Cumplimiento de labores","Cumple con la jornada de trabajo"],
+                ["Cumplimiento de labores","Cumple con el horario de clases"],
+                ["Cumplimiento de labores","Cumple con las asesorías programadas con los estudiantes"],
+                ["Cumplimiento de labores","Se interesa por el trabajo colectivo"],
+                ["Cumplimiento de labores","Cumple con las actividades programadas por el Departamento"],
+                ["Cumplimiento de labores","Atiende el proceso de presentación de notas"],
+                ["Cumplimiento de labores","Cumple con las comisiones que se encargan"],
+                ["Relaciones Universitarias","Las relaciones con los compañeros de trabajo son respetuosas y cordiales"],
+                ["Relaciones Universitarias","Su relación con los estudiantes es cordial y respetuosa"],
+                ["Relaciones Universitarias","Comunica oportunamente a las personas que corresponde, para suspender o cambiar actividades programadas"],
+                ["Relaciones Universitarias","Analiza y discute con respeto las ideas de los demás"],
+                #Evaluación al profesor por parte del decano
+                ["Cumplimiento","Asiste puntualmente a las reuniones programadas por la Facultad"],
+                ["Cumplimiento","Permanece en las reuniones programadas por la Facultad"],
+                ["Cumplimiento","Presenta los informes solicitados por la Facultad"],
+                ["Cumplimiento","Cumple con los trabajos asignados por la Facultad"],
+                ["Cumplimiento","Participa activamente en las actividades programadas por la Facultad"],
+                ["Cumplimiento","Conserva los bienes, documentos y materiales de la Universidad"],
+                ["Cumplimiento","Cumple con los compromisos de trabajos adquiridos con la Facultad y/o la Universidad"],
+                ["Relaciones Universitarias","Tiene en cuenta los canales de comunicación existentes"],
+                ["Relaciones Universitarias","Tiene un trato respetuoso con sus compañeros"],
+                ["Relaciones Universitarias","Observa las normas inherentes a la ética de su profesión"],
+                ["Relaciones Universitarias","Contribuye a la realización de actividades complementarias a la labor académica"],
+                ["Relaciones Universitarias","Colabora en la realización de eventos especiales programados por la Facultad"],
+                ["Relaciones Universitarias","Contribuye al desarrollo de las relaciones interinstitucionales de la Facultad"],
+                ["Relaciones Universitarias","Mantiene una actitud respetuosa frente a la institución"],
+               ] 
 
-Question.create(item: "Mantiene el interés de sus alumnos por los temas de la asignatura", aspect: "Metología")
-Question.create(item: "Destaca las ideas principales de los temas", aspect: "Metología")
-Question.create(item: "Formula preguntas que inducen al estudiante a razonar", aspect: "Metología")
-Question.create(item: "Orienta al estudiante en la búsqueda de respuestas", aspect: "Metología")
-Question.create(item: "Es claro al presentar la información, facilitando el aprendizaje al alumno", aspect: "Metología")
-Question.create(item: "Recomienda referencias bibliográficas acordes con los temas de estudio", aspect: "Metología")
-Question.create(item: "Estimula la participación del estudiante en clase por medio de talleres, grupos de estudio, exposiciones etc.", aspect: "Metología")
-Question.create(item: "La exposición de los temas es ordenada y responde a la dinámica del curso", aspect: "Metología")
-Question.create(item: "Utiliza diversos sistemas educativos distintos a las clase magistral", aspect: "Metología")
-Question.create(item: "Fomenta en los estudiantes el uso del vocabulario propio de la asignatura", aspect: "Metología")
-Question.create(item: "Mantiene el control de la clase", aspect: "Metología")
-Question.create(item: "Cumple con el programa propuesto", aspect: "Metología")
-Question.create(item: "Cumple las normas y criterios de evaluación establecidos en el programa y convenios con los estudiantes", aspect: "Metología")
-Question.create(item: "Analiza con los estudiantes los resultados de las evaluaciones", aspect: "Metología")
-Question.create(item: "Motiva a los estudiantes a realizar las prácticas o talleres y presta asesoría oportuna", aspect: "Metología")
-Question.create(item: "Facilita la elaboración de guías apropiadas para el desarrollo del trabajo práctico", aspect: "Metología")
-Question.create(item: "Existe correspondencia entre la información teórica y el trabajo práctico", aspect: "Metología")
-Question.create(item: "Estimula el análisis y la reflexión sobre el trabajo práctico", aspect: "Metología")
+question_list.each do |aspect, item|
+  Question.create( aspect: aspect, item: item )
+end
 
-Question.create(item: "Cumple con los compromisos académicos adquiridos con los estudiantes", aspect: "Relaciones Universitarias")
-Question.create(item: "Mantiene una relación respetuosa con los estudiantes", aspect: "Relaciones Universitarias")
-Question.create(item: "Motiva a la participación de eventos académicos de la universidad: conferencias, foros, seminarios, etc.", aspect: "Relaciones Universitarias")
-Question.create(item: "Se interesa en contribuir a la formación integral del estudiantes", aspect: "Relaciones Universitarias")
-Question.create(item: "Mantiene una actitud responsable en el trabajo", aspect: "Relaciones Universitarias")
 
-#Evaluación al profesor por parte del director del departamento
-
-Question.create(item: "Demuestra actualización en los conocimientos de su área", aspect: "Conocimiento")
-Question.create(item: "Comparte información, experiencias de trabajo etc", aspect: "Conocimiento")
-Question.create(item: "Aporta ideas, plantea problemas de investigación relativos a su área", aspect: "Conocimiento")
-Question.create(item: "Demuestra interés en utilizar bibliografía actualizada", aspect: "Conocimiento")
-
-Question.create(item: "Orienta la asignatura en función de los objetivos del área y plan de estudios de la carrera", aspect: "Metología")
-Question.create(item: "Presenta el programa en una estructura lógica, acorde con los objetivos del mismo", aspect: "Metología")
-Question.create(item: "Presenta el programa en una estructura lógica, acorde con los objetivos del mismo", aspect: "Metología")
-Question.create(item: "Desarrolla el programa en forma secuencial, y acorde con los objetivos del mismo", aspect: "Metología")
-Question.create(item: "La metodología del trabajo corresponde a las características del grupo", aspect: "Metología")
-Question.create(item: "La metodología del trabajo corresponde a las características de la temática del área", aspect: "Metología")
-Question.create(item: "Se autoevalúa para mejorar su actividad como docente", aspect: "Metología")
-Question.create(item: "Actualiza periódicamente sus programas y clases en contenidos, metodología y bibliografía", aspect: "Metología")
-Question.create(item: "El sistema evaluativo es coherente con las formas metodológicas empleadas", aspect: "Metología")
-
-Question.create(item: "Presenta el plan y el informe de actividades", aspect: "Cumplimiento de labores")
-Question.create(item: "Es responsable y cumplido en los trabajos que se le asignan", aspect: "Cumplimiento de labores")
-Question.create(item: "Cumple con la jornada de trabajo", aspect: "Cumplimiento de labores")
-Question.create(item: "Cumple con el horario de clases", aspect: "Cumplimiento de labores")
-Question.create(item: "Cumple con las asesorías programadas con los estudiantes", aspect: "Cumplimiento de labores")
-Question.create(item: "Se interesa por el trabajo colectivo", aspect: "Cumplimiento de labores")
-Question.create(item: "Cumple con las actividades programadas por el Departamento", aspect: "Cumplimiento de labores")
-Question.create(item: "Atiende el proceso de presentación de notas", aspect: "Cumplimiento de labores")
-Question.create(item: "Cumple con las comisiones que se encargan", aspect: "Cumplimiento de labores")
-
-Question.create(item: "Las relaciones con los compañeros de trabajo son respetuosas y cordiales", aspect: "Relaciones Universitarias")
-Question.create(item: "Su relación con los estudiantes es cordial y respetuosa", aspect: "Relaciones Universitarias")
-Question.create(item: "Comunica oportunamente a las personas que corresponde, para suspender o cambiar actividades programadas", aspect: "Relaciones Universitarias")
-Question.create(item: "Analiza y discute con respeto las ideas de los demás", aspect: "Relaciones Universitarias")
-
-#Evaluación al profesor por parte del decano
-
-Question.create(item: "Asiste puntualmente a las reuniones programadas por la Facultad", aspect: "Cumplimiento")
-Question.create(item: "Permanece en las reuniones programadas por la Facultad", aspect: "Cumplimiento")
-Question.create(item: "Presenta los informes solicitados por la Facultad", aspect: "Cumplimiento")
-Question.create(item: "Cumple con los trabajos asignados por la Facultad", aspect: "Cumplimiento")
-Question.create(item: "Participa activamente en las actividades programadas por la Facultad", aspect: "Cumplimiento")
-Question.create(item: "Conserva los bienes, documentos y materiales de la Universidad", aspect: "Cumplimiento")
-Question.create(item: "Cumple con los compromisos de trabajos adquiridos con la Facultad y/o la Universidad", aspect: "Cumplimiento")
-
-Question.create(item: "Tiene en cuenta los canales de comunicación existentes", aspect: "Relaciones Universitarias")
-Question.create(item: "Tiene un trato respetuoso con sus compañeros", aspect: "Relaciones Universitarias")
-Question.create(item: "Observa las normas inherentes a la ética de su profesión", aspect: "Relaciones Universitarias")
-Question.create(item: "Contribuye a la realización de actividades complementarias a la labor académica", aspect: "Relaciones Universitarias")
-Question.create(item: "Colabora en la realización de eventos especiales programados por la Facultad", aspect: "Relaciones Universitarias")
-Question.create(item: "Contribuye al desarrollo de las relaciones interinstitucionales de la Facultad", aspect: "Relaciones Universitarias")
-Question.create(item: "Mantiene una actitud respetuosa frente a la institución", aspect: "Relaciones Universitarias")
