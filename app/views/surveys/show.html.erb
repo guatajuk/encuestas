@@ -8,6 +8,12 @@
   <dd><%= @survey.name %></dd><dt>
   <strong><%= model_class.human_attribute_name(:survey_type) %>:</strong></dt>
   <dd><%= @survey.survey_type.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:question) %>:</strong></dt>
+  <%i=1%>
+  <% @survey.questions.sort{ |a,b| a.item <=> b.item }.each do |c| %>
+  <dd><%=i%>. <%= c.item %></dd>
+    <%i=i+1%>
+  <% end %>
   <dt><strong><%= model_class.human_attribute_name(:deadline) %>:</strong></dt>
   <dd><%= @survey.deadline %></dd>
 </dl>

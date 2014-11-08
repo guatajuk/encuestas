@@ -8,6 +8,7 @@
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:survey_type) %></th>
       <th><%= model_class.human_attribute_name(:deadline) %></th>
+      <th><%= model_class.human_attribute_name(:question) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -17,6 +18,13 @@
         <td><%= survey.name %></td>
         <td><%= survey.survey_type.name %></td>
         <td><%= survey.deadline %></td>
+        <td>
+        <%i = 1%>
+          <% survey.questions.sort{ |a,b| a.aspect.name <=> b.aspect.name }.each do |c| %>
+            <dd><%=i%>. <%= c.item %> - <strong><%= c.aspect.name %></strong></dd>
+            <%i=i+1%>
+          <% end %>
+        </td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_survey_path(survey), :class => 'btn btn-mini' %>

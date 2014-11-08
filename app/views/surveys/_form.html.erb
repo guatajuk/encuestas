@@ -10,6 +10,22 @@
       <%= f.text_field :name, :class => 'text_field' %>
     </div>
   </div>
+
+  <div class="control-group">
+    <%= f.label "questions", :class => 'control-label' %>
+    <div id="questions" class="controls">          
+      <table>
+        <tr>
+          <% Question.all.each do |q| %>
+            <td>
+              <%= check_box_tag "survey[question_ids][]", q.id, @survey.question_ids.include?(q.id) %>
+              <%= q.item %> - <strong><%= q.aspect.name %></strong></dd>
+            </td>
+          </tr>
+          <% end %>
+      </table>
+    </div>
+  </div>
   
   <div class="control-group">
     <%= f.label :survey_type_id, :class => 'control-label' %>
