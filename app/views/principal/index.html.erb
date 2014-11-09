@@ -2,31 +2,25 @@
 <h1>Sistema de Evaluación Universitario (SEU)</h1>
 
 <div class="escoger row">
+
   <div class="actores span12">
     <div class="estudiante span3">
       <div class="imagen">Estudiante</div>
-      <div class="btn btn-info">
-	<%= link_to 'Ingresar', controller: 'questions' %>
-      </div>
+      <%= link_to 'Ingresar', '/questions', :class => "btn btn-info" %>
     </div>
     <div class="docente span3">
       <div class="imagen">Docente</div>
-      <div class="btn btn-info">
-	<%= link_to 'Ingresar', controller: 'questions' %>
-      </div>
+      <%= link_to 'Ingresar', '/questions', :class => "btn btn-info" %>
     </div>
     <div class="director span3">
       <div class="imagen">Director de Programa</div>
-      <div class="btn btn-info">
-	<%= link_to 'Ingresar', controller: 'questions' %>
-      </div>
+      <%= link_to 'Ingresar', '/questions', :class => "btn btn-info" %>
     </div>
     <div class="administrador span3">
       <div class="imagen">Administrador</div>
-      <div class="btn btn-info">
-	<%= link_to 'Ingresar', controller: 'questions' %>
-      </div>
+      <%= link_to "Ingresar", '/questions', :class => "btn btn-info" %>  
     </div>
   </div>
 
 </div>
+
