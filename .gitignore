@@ -4,6 +4,7 @@
 capybara-*.html
 .rspec
 /log
+/doc
 /tmp
 /db/*.sqlite3
 /public/system
