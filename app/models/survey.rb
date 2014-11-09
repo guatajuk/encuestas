@@ -1,6 +1,7 @@
 class Survey
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Slug
 
   resourcify
   
@@ -12,5 +13,9 @@ class Survey
 
   has_many :questions
   belongs_to :survey_type
+
+	slug history: true do |surv|
+    "#{surv.name} #{surv.deadline}".to_url
+  end
 
 end

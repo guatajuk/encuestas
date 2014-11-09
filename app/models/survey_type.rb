@@ -1,6 +1,7 @@
 class SurveyType
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Slug
 
   resourcify
 
@@ -10,4 +11,7 @@ class SurveyType
   validates_presence_of :name
   
   has_many :surveys
+
+  slug :name, :history => true
+
 end
