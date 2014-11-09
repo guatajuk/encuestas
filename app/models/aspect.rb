@@ -2,6 +2,8 @@ class Aspect
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  resourcify
+
   field :name, type: String
 
   validates_uniqueness_of :name

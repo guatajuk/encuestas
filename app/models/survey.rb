@@ -1,6 +1,8 @@
 class Survey
   include Mongoid::Document
   include Mongoid::Timestamps
+
+  resourcify
   
   field :name, type: String
   field :deadline, type: Date
