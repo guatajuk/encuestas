@@ -1,6 +1,7 @@
 class SurveysController < ApplicationController
   respond_to :html, :xml, :json
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   def index
     @surveys = Survey.all
