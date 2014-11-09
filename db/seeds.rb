@@ -1,3 +1,8 @@
+user = User.new
+user.email = "admin@seu.com"
+user.password = "admin1234"
+user.save
+
 survey_type_list = [
                     "Estudiantes a profesor", 
                     "Decano a profesor", 
