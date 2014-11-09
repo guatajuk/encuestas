@@ -22,9 +22,6 @@ gem 'spring', '~> 1.1.3'
 
 gem 'mongoid', '~> 4.0.0'
 
-# Bootstrap
-# gem 'twitter-bootstrap-rails', :github => 'seyhunak/twitter-bootstrap-rails', :branch => 'bootstrap3'
-
 # Bootstrap Gem
 gem 'twitter-bootstrap-rails', '~> 2.2.8'
 
