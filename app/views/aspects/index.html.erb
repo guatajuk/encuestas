@@ -15,12 +15,12 @@
         <td><%= aspect.name %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_aspect_path(aspect), :class => 'btn btn-default btn-xs' %>
+                      edit_aspect_path(aspect), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       aspect_path(aspect),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
+                      :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
     <% end %>
