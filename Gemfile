@@ -50,6 +50,6 @@ gem 'railroady'
 gem 'rake', '~> 10.3.2'
 
 # Savon - Heavy metal SOAP client
-#gem 'savon', '~> 2.3.0'
+gem 'savon', '~> 2.7.2'
 
 
