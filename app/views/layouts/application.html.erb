@@ -76,7 +76,7 @@
         <div class="span11">
           <div class="nav pull-right"> 
             <% if user_signed_in? %>
-              Welcome back!, <strong><%= current_user.name %></strong>
+              Welcome back!, <strong><%= current_user.email %></strong>
             <% end %>
           </div>
           <%= bootstrap_flash %>
