@@ -173,3 +173,16 @@ footer {
 form {
     margin: 0 0 5px;
 }
+
+.imagen {
+    border: 0.1px solid rgb(198, 201, 210);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 1px 2px rgb(180, 185, 201);
+    height: 100px;
+    text-align: center;
+          color: rgb(0, 136, 204);
+}
+.actores > div .btn {
+    border-radius: 0 0 5px 5px;
+    width: 90%;
+}
