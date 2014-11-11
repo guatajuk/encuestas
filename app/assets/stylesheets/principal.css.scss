@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
-.btn-primary, .btn-danger, .btn-info, .btn-success  {
+.btn-primary, .btn-danger, .btn-info, .btn-success,.btn-warning   {
     color: rgb(255,255,255) !important;
 }
 
@@ -186,3 +186,7 @@ form {
     border-radius: 0 0 5px 5px;
     width: 90%;
 }
+
+#logo {
+        text-align:center;
+        }
