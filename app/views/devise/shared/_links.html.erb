@@ -1,6 +1,9 @@
-<div id="login-options">
+  <br/>
+  <br/>
+  <hr>
+<div id="login-options" class="span12">  
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name), :class => "btn btn-info" %><br />
+  <%= link_to "Log in", new_session_path(resource_name), :class => "btn btn-info span12" %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
