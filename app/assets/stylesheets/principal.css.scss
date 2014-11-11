@@ -1,8 +1,9 @@
 // Place all the styles related to the principal controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
-.btn-primary, .btn-danger, .btn-info  {
+.btn-primary, .btn-danger, .btn-info, .btn-success  {
     color: rgb(255,255,255) !important;
 }
 
@@ -121,3 +122,44 @@
                      background-image: linear-gradient(top, #575e63, #3f4347);
                      filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#575e63', EndColorStr='#3f4347');
                      }
+
+.icon-keys:before {
+    font-family: 'FontAwesome', sans-serif;
+    content: "\f084";                    
+}
+
+#new_user > div.text, #new_user > div.text > input {
+    width: 100%;
+}
+
+#new_user > div > input[type=email], #new_user > div > input[type=password]
+{
+  width: 88%;
+  }
+
+label.user_remember_me {
+    margin-left: 0 !important;
+    margin-top: 5px;
+}
+
+#login-section [class*="span"] {
+    margin-left: 0 !important;
+}
+
+
+#login-options a:not(.btn) {
+    color: rgb(0, 136, 204) !important;
+    text-decoration: none;
+}
+
+#login-options a:focus {
+
+}
+
+#login-options a:not(.btn) {
+  &:hover {
+           color: rgb(0, 136, 204);
+           text-decoration: underline;
+           background-color: rgb(255,255,255);
+  }
+}
