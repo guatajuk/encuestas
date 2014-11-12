@@ -50,9 +50,4 @@ gem 'rake', '~> 10.3.2'
 gem 'savon', '~> 2.7.2'
 
 # Breadcrumbs
-gem "breadcrumbs_on_rails"
-
-# Simple Calendar
-
-
-
+gem "breadcrumbs_on_rails", '~> 2.3.0'
