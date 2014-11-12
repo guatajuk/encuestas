@@ -51,3 +51,6 @@ gem 'savon', '~> 2.7.2'
 
 # Breadcrumbs
 gem "breadcrumbs_on_rails", '~> 2.3.0'
+
+#jQuery Turbolinks
+gem 'jquery-turbolinks', '~> 2.1.0'
