@@ -1,0 +1,51 @@
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+es:
+  hello: "Hola Mundo"
+  homepage: "Inicio"
+  question: "Pregunta"
+  survey: "Encuesta"
+  survey_type: "Tipo Encuesta"
+  aspect: "Aspecto"
+  item: "Sentencia"
+  
+  new: "Nuevo"
+  edit: "Editar"
+  create: "Crear"
+  destroy: "Eliminar"
+  index: "Indice"
+  show: "Ver"
+  
+
+  teacher: "Profesor"
+  student: "Estudiante"
+  headmaster: "Director de Departamento"
+  administrator: "Administrador"
+
+  login: "Iniciar Sesión"
+  logout: "Salir de la Sesión"
+  signup: "Registrarse"
+  signout: "Desconectarse"
+  forgot_password: "Clave Olvidada ?"
+  go: "Entrar"
+  welcome: "Bienvenido !"
+  seu: "Sistema de Evaluación Universitario"
+  rememberme: "Recuerdame"
+
+  email: "Correo"
+  password: "Clave"
+  password_confirmation: "Confirmación de Clave"
+
+  first: "Primero"
+  previous: "Anterior"
+  next: "Siguiente"
+  last: "Último"
+
+  delete: "Eliminar"
+  confirm: "Confirmar"
+  default: "Por Defecto"

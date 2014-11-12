@@ -48,19 +48,19 @@
           <a class="brand" href="/">SEU</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav pull-right">
-              <li><%= link_to "Surveys", "/surveys"  %></li>
-              <li><%= link_to "Survey Type", "/survey_types"  %></li>
-              <li><%= link_to "Aspects", "/aspects"  %></li>
-              <li><%= link_to "Questions", "/questions"  %></li>
+              <li><%= link_to t("survey"), "/surveys"  %></li>
+              <li><%= link_to t("survey_type"), "/survey_types"  %></li>
+              <li><%= link_to t("aspect"), "/aspects"  %></li>
+              <li><%= link_to t("question"), "/questions"  %></li>
             </ul>
             <ul class="nav pull-right">
               <% if user_signed_in? %>
                 <li>
-                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                  <%= link_to(t('logout'), destroy_user_session_path, :method => :delete) %>
                 </li>
               <% else %>
                 <li>
-                  <%= link_to('Login', new_user_session_path)  %>
+                  <%= link_to(t('login'), new_user_session_path)  %>
                 </li>
               <% end %>
             </ul>
@@ -76,7 +76,7 @@
         <div class="span11">
           <div class="nav pull-right"> 
             <% if user_signed_in? %>
-              Welcome back!, <strong><%= current_user.email %></strong>
+             <%= t('welcome') %> , <strong><%= current_user.email %></strong>
             <% end %>
           </div>
           <%= bootstrap_flash %>
@@ -85,7 +85,7 @@
       </div><!--/row-->
       <div class="clearfix visible-xs-block"></div>
       <footer style="text-align: center;">
-        <p>&copy; Sistema de Evaluación Universitario - 2014</p>
+        <p>&copy; <%= t('seu') %> - 2014</p>
       </footer>
     </div> <!-- /container -->
   </body>

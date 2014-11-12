@@ -147,16 +147,16 @@ label.user_remember_me {
 }
 
 
-#login-options a:not(.btn) {
+#login-options a:not(.btn), .breadcrumb a{
     color: rgb(0, 136, 204) !important;
     text-decoration: none;
 }
 
-#login-options a:not(.btn) {
+#login-options a:not(.btn), .breadcrumb a {
   &:hover {
            color: rgb(0, 136, 204);
            text-decoration: underline;
-           background-color: rgb(255,255,255);
+           background-color: rgba(255,255,255,0);
   }
 }
 
@@ -190,3 +190,33 @@ form {
 #logo {
         text-align:center;
         }
+
+.navbar .brand:hover, .navbar .brand:focus {
+    text-decoration: none;
+    background: gray;
+    box-shadow: 0px 2px 10px #D4D4D6;
+    color: white;
+    border: solid 0.2px #6C6A6A;
+    transition: ease-in 0.1s;
+}
+
+#error_explanation {
+    width: 94% !important;
+}
+
+a.current-page, a.current-page:hover {
+                                       color: rgb(171, 165, 165);
+                                       text-decoration: none;
+                                       background-color:white;
+}
+
+#separador {
+    color: rgb(183, 177, 217);
+    display: inline;
+    width: 10px;
+}
+
+
+.page-header {
+     margin: 20px 0 0;
+}

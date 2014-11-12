@@ -3,6 +3,10 @@ class SurveysController < ApplicationController
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
+  add_breadcrumb I18n.t("survey"), '/surveys', :title => "Back to surveys"
+  add_breadcrumb I18n.t("new"), '/new', :only => [:new,:create], :title => "Back to new"
+  add_breadcrumb I18n.t("edit"), '/edit', :only => [:edit,:update], :title => "Back to edit"
+
   def index
     @surveys = Survey.all
     respond_with(@surveys)
@@ -43,5 +47,9 @@ class SurveysController < ApplicationController
 
     def survey_params
       params.require(:survey).permit(:name, :deadline, :survey_type_id, question_ids: [])
+    end
+    def set_breadcrumb_for cat
+      set_breadcrumb_for cat.parent if cat.parent
+      add_breadcrumb cat.name, "category_path(#{cat.id})"
     end
 end

@@ -12,12 +12,54 @@
 #
 # To use a different locale, set it with `I18n.locale`:
 #
-#     I18n.locale = :es
+#     I18n.locale = :en
 #
-# This would use the information in config/locales/es.yml.
+# This would use the information in config/locales/en.yml.
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
   hello: "Hello world"
+  homepage: "Home"
+  question: "Question"
+  survey: "Survey"
+  survey_type: "Survey Type"
+  aspect: "Aspect"
+  item: "Item"
+
+  new: "New"
+  edit: "Edit"
+  create: "Create"
+  destroy: "Destroy"
+  index: "Indx"
+  show: "Show"
+
+  teacher: "Teacher"
+  student: "Student"
+  headmaster: "Headmaster"
+  administrator: "Administrator"
+
+  login: "Log In"
+  logout: "Log Out"
+  signup: "Sign Up"
+  signout: "Sign Out"
+  forgot_password: "Forgot Password ?"
+  go: "Go"
+  welcome: "Welcome Back !"
+  seu: "University Evaluation System"
+  rememberme: "Remember Me"
+
+  email: "Email"
+  password: "Password"
+  password_confirmation: "Password Confirmation"
+
+  first: "First"
+  previous: "Previous"
+  next: "Next"
+  last: "Last"
+
+  delete: "Delete"
+  confirm: "Confirm"
+  default: "Default"
+  

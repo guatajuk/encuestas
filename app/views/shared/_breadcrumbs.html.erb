@@ -1,0 +1,16 @@
+<% if @breadcrumbs %>
+  <ol class="breadcrumb">
+    <% @separator = "/" %>
+  <% @breadcrumbs[0..-2].each do |txt, path| %>
+    <li>
+    <%= link_to t(h(txt)), path %> 
+    </li>
+    <div id="separador">
+    <%= @separator %>
+    </div>
+  <% end %>
+  <li class="active">
+  <%= t(h(@breadcrumbs.last.first)) %>
+  </li>
+  </ol>
+<% end %>

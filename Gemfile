@@ -49,4 +49,6 @@ gem 'rake', '~> 10.3.2'
 # Savon - Heavy metal SOAP client
 gem 'savon', '~> 2.7.2'
 
+# Breadcrumbs
+gem "breadcrumbs_on_rails"
 
