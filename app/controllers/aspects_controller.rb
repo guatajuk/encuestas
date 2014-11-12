@@ -3,9 +3,9 @@ class AspectsController < ApplicationController
   before_action :set_aspect, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
-  add_breadcrumb I18n.t("aspect"), '/aspects', :title => "Back to aspects"
-  add_breadcrumb I18n.t("new"), '/new', :only => [:new,:create], :title => "Back to new"
-  add_breadcrumb I18n.t("edit"), '/edit', :only => [:edit,:update], :title => "Back to edit"
+  add_breadcrumb "aspect", '/aspects', :title => "Back to aspects"
+  add_breadcrumb "new", '/new', :only => [:new,:create], :title => "Back to new"
+  add_breadcrumb "edit", '/edit', :only => [:edit,:update], :title => "Back to edit"
 
   def index
     @aspects = Aspect.all

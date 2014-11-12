@@ -3,9 +3,9 @@ class SurveyTypesController < ApplicationController
   before_action :set_survey_type, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
-  add_breadcrumb I18n.t("survey_type"), '/survey_types', :title => "Back to survey types"
-  add_breadcrumb I18n.t("new"), '/new', :only => [:new,:create], :title => "Back to new"
-  add_breadcrumb I18n.t("edit"), '/edit', :only => [:edit,:update], :title => "Back to edit"
+  add_breadcrumb "survey_type", '/survey_types', :title => "Back to survey types"
+  add_breadcrumb "new", '/new', :only => [:new,:create], :title => "Back to new"
+  add_breadcrumb "edit", '/edit', :only => [:edit,:update], :title => "Back to edit"
 
   def index
     @survey_types = SurveyType.all

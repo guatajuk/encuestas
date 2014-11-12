@@ -41,10 +41,13 @@ es:
   password: "Clave"
   password_confirmation: "Confirmación de Clave"
 
-  first: "Primero"
-  previous: "Anterior"
-  next: "Siguiente"
-  last: "Último"
+  views:
+   pagination:
+    first: "Primero"
+    previous: "&lt; Anterior"
+    next: "Siguiente &gt;"
+    truncate: "..."
+    last: "Último"
 
   delete: "Eliminar"
   confirm: "Confirmar"

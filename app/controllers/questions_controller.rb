@@ -3,9 +3,9 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
-  add_breadcrumb "question", '/questions', :title => "Back to questions"
-  add_breadcrumb "new", '/new', :only => [:new,:create], :title => "Back to new"
-  add_breadcrumb "edit", '/edit', :only => [:edit,:update], :title => "Back to edit"
+  add_breadcrumb 'question', '/questions', :title => "Back to questions"
+  add_breadcrumb 'new', '/new', :only => [:new,:create], :title => "Back to new"
+  add_breadcrumb 'edit', '/edit', :only => [:edit,:update], :title => "Back to edit"
 
   def index
     @questions = Question.all.page params[:page]

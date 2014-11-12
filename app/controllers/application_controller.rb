@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Breadcrumb Home Page
-  add_breadcrumb I18n.t("homepage"), :root_path, :class => "Back to the home page"
+  add_breadcrumb "homepage", :root_path, :class => "Back to the home page"
 
   # Cancan Authorization
   rescue_from CanCan::AccessDenied do |exception|
