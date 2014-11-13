@@ -4,23 +4,19 @@
 </div>
 <table class="table table-striped">
   <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+    <tr>    
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:course_id) %></th>
+      <th><%= model_class.human_attribute_name(:course_code) %></th>
       <th><%= model_class.human_attribute_name(:group) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= link_to course.id, course_path(course) %></td>
         <td><%= course.name %></td>
         <td><%= course.course_id %></td>
         <td><%= course.group %></td>
-        <td><%=l course.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_course_path(course), :class => 'btn btn-mini' %>
