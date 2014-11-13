@@ -9,6 +9,10 @@ class User
   ## Database authenticatable
   field :name,               type: String
   field :id_number,           type: String
+  #Si es estudiante aquí se almacena el codigo
+  #Si es profesor aquí se almacena la cedula
+
+
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
 
@@ -25,6 +29,8 @@ class User
   field :last_sign_in_at,    type: Time
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
+
+  has_many :courses
 
   #Savon gem test, works fine butt it's not enough
   def create_student (id)
