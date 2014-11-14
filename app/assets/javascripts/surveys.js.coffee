@@ -2,4 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$('#survey_deadline').datepicker()
+s=$('#survey_deadline').datepicker
+
+if s?
+ $('#survey_deadline').datepicker()

@@ -76,6 +76,9 @@ en:
   create_course: "Create Course"
   cancel: "Cancel"
   helpers:
+   submit:
+    create: "Create %{model}"
+    update: "Update %{model}"
    actions: "Actions"
    titles:
     new: "New %{model}"
@@ -85,6 +88,7 @@ en:
     destroy: "Destroy"
     new: "New"
     confirm: "Confirm"
+    cancel: "Cancel"
   mongoid:
    models:
     course: "Course"
