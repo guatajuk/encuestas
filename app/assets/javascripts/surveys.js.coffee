@@ -2,8 +2,13 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-s=$('#survey_deadline').datepicker
+activado=false
+evaluar=()-> if $('#survey_deadline')? and $('#survey_deadline').datepicker? then activar() else $("#survey_deadline").hover(activar)
+activar=() -> if activado is false then $('#survey_deadline').datepicker() activado = true 
 
-if s?
- s()
+# si se recarga la pagina
+$(document).ready(evaluar)
+# si se cambia de pagina
+$(document).on('page:load', evaluar);
+
 
