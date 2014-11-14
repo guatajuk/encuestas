@@ -6,3 +6,4 @@ s=$('#survey_deadline').datepicker
 
 if s?
  s()
+
