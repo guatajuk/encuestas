@@ -9,6 +9,10 @@ class User
   ## Database authenticatable
   field :name,               type: String
   field :id_number,           type: String
+  #Si es estudiante aquí se almacena el codigo
+  #Si es profesor aquí se almacena la cedula
+
+
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
 
@@ -26,14 +30,7 @@ class User
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
 
-  #Savon gem test, works fine butt it's not enough
-  def create_student (id)
-    client = Savon.client(wsdl: "http://acadtest.ucaldas.edu.co:8084/wsClasesEstudiante.asmx?WSDL") #Connect to SOAP service
-    response = client.call(:get_datos_estudiante, message: {codigo: id}) #Catch message from "get_datos_estudiante" with a user id
-    noko_doc = Nokogiri::XML(response) #Parses this response to a Nokogiri document
-    fuzzyName = noko_doc.xpath("//NOMBRES").to_s #Nokogiri search inside te huge string and return all values in "NOMBRES" tag
-    User.create(name: fuzzyName[9..fuzzyName.size-11]) #Create a user from the SOAP data
-  end
+  has_many :courses
 
   ## Confirmable
   # field :confirmation_token,   type: String
