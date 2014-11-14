@@ -55,7 +55,7 @@ gem "breadcrumbs_on_rails", '~> 2.3.0'
 #jQuery Turbolinks
 gem 'jquery-turbolinks', '~> 2.1.0'
 
-gem 'tzinfo-data', '~> 2.4.2' #, platforms: [:mingw, :mswin, :x64_mingw]
+gem 'tzinfo-data', '~> 2.4.2' , platforms: [:mingw, :mswin, :x64_mingw]
 
 gem 'tzinfo', '~> 1.2.2'
 

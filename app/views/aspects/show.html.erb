@@ -4,7 +4,7 @@
 </div>
 <%= render :partial => "shared/breadcrumbs" %>
 <dl class="dl-horizontal">
-  <dt><strong><%= t(name) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @aspect.name %></dd>
 </dl>
 
