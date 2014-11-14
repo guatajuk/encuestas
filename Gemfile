@@ -52,7 +52,3 @@ gem 'savon', '~> 2.7.2'
 # Breadcrumbs
 gem "breadcrumbs_on_rails"
 
-# Simple Calendar
-
-
-
