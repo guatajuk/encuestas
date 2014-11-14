@@ -20,7 +20,7 @@ es:
   destroy: "Eliminar"
   index: "Indice"
   show: "Ver"
-  
+  back: "Atrás"
 
   teacher: "Profesor"
   student: "Estudiante"
@@ -53,3 +53,48 @@ es:
   confirm: "Confirmar"
   default: "Por Defecto"
   action: "Acción"
+
+  name: "Nombre"
+  course_code: "Código de Curso"
+  group: "Grupo"
+  title: "Título"
+  course_id: "ID Curso"
+  create_course: "Crear Curso"
+  cancel: "Cancelar"
+  helpers:
+   actions: "Acciones"
+   titles:
+    new: "Nuevo %{model}"
+    edit: "Editar %{model}"
+   links:
+    edit: "Editar"
+    destroy: "Destruir"
+    new: "Nuevo"
+    confirm: "Confirmar"
+  mongoid:
+   models:
+    course: "Curso"
+    aspect: "Aspecto"
+    question: "Pregunta"
+    role: "Rol"
+    survey: "Encuesta"
+    survey_type: "Tipo de encuesta"
+    user: "Usuario"
+   attributes:
+    course:
+    aspect:
+     name: "Nombre"
+    question:
+     item: "Sentencia"
+     aspect: "Aspecto"
+     aspect_id: "ID Aspecto"
+    role:
+    survey:
+     name: "Nombre"
+     questions: "Preguntas"
+     deadline: "Fecha Limite"
+     survey_type_id: "Tipo de Encuesta"
+     survey_type: "Tipo de Encuesta"
+    survey_type:
+     name: "Nombre"
+    user:    

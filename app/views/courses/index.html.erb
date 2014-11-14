@@ -8,7 +8,7 @@
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:course_code) %></th>
       <th><%= model_class.human_attribute_name(:group) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%=t '.action', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
@@ -23,7 +23,7 @@
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       course_path(course),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
@@ -31,6 +31,6 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
+<%= link_to t('new', :default => t("helpers.links.new")),
             new_course_path,
             :class => 'btn btn-primary' %>

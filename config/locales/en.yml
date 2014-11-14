@@ -34,7 +34,8 @@ en:
   destroy: "Destroy"
   index: "Indx"
   show: "Show"
-
+  back: "Back"
+  
   teacher: "Teacher"
   student: "Student"
   headmaster: "Headmaster"
@@ -67,4 +68,47 @@ en:
   default: "Default"
   action: "Action"
   
-  
+  name:		 "Name"
+  course_code: "Curse Code"
+  group: "Group"
+  title: "Title"
+  course_id: "Course ID"
+  create_course: "Create Course"
+  cancel: "Cancel"
+  helpers:
+   actions: "Actions"
+   titles:
+    new: "New %{model}"
+    edit: "Edit %{model}"
+   links:
+    edit: "Edit"
+    destroy: "Destroy"
+    new: "New"
+    confirm: "Confirm"
+  mongoid:
+   models:
+    course: "Course"
+    aspect: "Aspect"
+    question: "Question"
+    role: "Role"
+    survey: "Survey"
+    survey_type: "Survey Type"
+    user: "User"
+   attributes:
+    course:
+    aspect:
+     name: "Name"
+    question:
+     item: "Item"
+     aspect: "Aspect"
+     aspect_id: "Aspect ID"
+    role:
+    survey:
+     name: "Name"
+     questions: "Questions"
+     deadline: "Deadline"
+     survey_type_id: "Survey Type"
+     survey_type: "Survey Type"
+    survey_type:
+     name: "Name"
+    user:
