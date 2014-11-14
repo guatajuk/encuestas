@@ -5,4 +5,4 @@
 s=$('#survey_deadline').datepicker
 
 if s?
- $('#survey_deadline').datepicker()
+ s()
