@@ -6,11 +6,9 @@ class Ability
     if user.has_role? "admin"
         can :manage, :all
     elsif user.has_role? "student"
-     		can
+    	
     elsif user.has_role? "teacher"
 
-    elsif user.has_role? "dean"
-    
     elsif user.has_role? "dean"
     	can :manage, Survey
     elsif user.has_role? "director"
