@@ -15,7 +15,6 @@ a2 = Aspect.create(name: "Metodología")
 a3 = Aspect.create(name: "Cumplimiento de labores")
 a4 = Aspect.create(name: "Relaciones Universitarias")
 
-
 question_list =[
                 #Evaluación al profesor por parte de los estudiantes
                 [a1.id,"Demuestra dominio en el manejo de los temas que trata"],
@@ -96,4 +95,3 @@ end
 survey_type_list.each do |type|
   SurveyType.create(name: type)
 end
-
