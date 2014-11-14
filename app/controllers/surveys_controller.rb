@@ -25,8 +25,7 @@ class SurveysController < ApplicationController
   end
 
   def create
-    @survey = Survey.new(survey_params)
-    @survey.save
+    @survey = Survey.create(survey_params)
     respond_with(@survey)
   end
 
