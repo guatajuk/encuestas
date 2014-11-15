@@ -2,7 +2,7 @@ SEU
 ===
 
 # Descripción
-Sistema de Evaluación Universitario para la Universidad de Caldas. El sistema permite:
+Sistema de Evaluación Universitario para la Universidad de Caldas. El sistema está diseñado para que los actores involucrados puedan calificar el desempeño de los docentes en un periodo académico determinado. El sistema hasta el momento permite:
 
 ##1. Crear encuestas
 Estas tienen un nombre, una fecha límite para su diligenciamiento, un tipo de encuesta y un conjunto de preguntas
