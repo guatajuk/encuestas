@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :answer_forms
+
   resources :courses
 
   devise_for :users
