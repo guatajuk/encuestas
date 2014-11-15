@@ -1,17 +1,19 @@
 class User
   include Mongoid::Document
+
+  attr_accessor :role
+  
   rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :recoverable, 
+         :rememberable, :trackable, :validatable
 
   ## Database authenticatable
   field :name,               type: String
   field :id_number,           type: String
   #Si es estudiante aquí se almacena el codigo
   #Si es profesor aquí se almacena la cedula
-
 
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""

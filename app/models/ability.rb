@@ -3,17 +3,15 @@ class Ability
 
   def initialize(user)
     user ||= User.new # guest user (not logged in)
-    if user.has_role? "admin"
+    if user.has_role? "Admin"
         can :manage, :all
-    elsif user.has_role? "student"
-     		can
-    elsif user.has_role? "teacher"
+    elsif user.has_role? "Student"
+    	
+    elsif user.has_role? "Teacher"
 
     elsif user.has_role? "dean"
-    
-    elsif user.has_role? "dean"
     	can :manage, Survey
-    elsif user.has_role? "director"
+    elsif user.has_role? "Director"
     	
     end
 
