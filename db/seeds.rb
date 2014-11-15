@@ -1,31 +1,31 @@
 user1 = User.new
 user1.email = "admin@seu.com"
 user1.password = "admin1234"
-user1.add_role "admin"
+user1.add_role 'Admin'
 user1.save
 
 user2 = User.new
 user2.email = "julian@seu.com"
 user2.password = "student1234"
-user2.add_role "student"
+user2.add_role 'Student"'
 user2.save
 
 user3 = User.new
 user3.email = "marcelo@seu.com"
 user3.password = "dean1234"
-user3.add_role "dean"
+user3.add_role 'Dean'
 user3.save
 
 user4 = User.new
 user4.email = "luz@seu.com"
 user4.password = "director1234"
-user4.add_role "director"
+user4.add_role "Director"
 user4.save
 
 user5 = User.new
 user5.email = "jairo@seu.com"
 user5.password = "teacher1234"
-user5.add_role "teacher"
+user5.add_role "Teacher"
 user5.save
 
 SurveyType.create(name: "Estudiantes a profesor")
