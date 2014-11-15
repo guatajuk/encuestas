@@ -40,6 +40,12 @@ Cada rol asignado a un usuario puede tener diferentes permisos en el sistema y e
 * Profesores
 * Estudiantes
 
+##8. Restringir el acceso a la plataforma
+Uno de los requerimientos es que la calificación docente solo se haga desde el interior de la Universidad de Caldas. El sistema solo será accesible desde el pool de direcciones públicas de la universidad
+
+##9. Traducción
+La plataforma está disponible nativamente en inglés y es traducido al español
+
 ##Colaboradores
 Aquí pueden encontrar una lista de los desarrolladores involucrados en la construcción del sistema
 
