@@ -1,39 +1,36 @@
-Sistema de Evaluación Universitario (SEU)
-==============================================
+SEU
+===
 
-# Instalación
+# Descripción
 
-- Instalar ruby on rails
-- Intalar mongodb-server
+Sistema de Evaluación Universitario para la Universidad de Caldas. El sistema permite:
 
-# Caracteristicas
+1. Crear encuestas
+		Estas tienen un nombre, una fecha límite para su diligenciamiento, un tipo de encuesta y un conjunto de preguntas
 
-> Version de Ruby : 
+2. Crear tipos encuesta
+		Por defecto se tienen encuestas de tipo:
+		
+		- Estudiantes evaluan al docente
+		- Director(es) de programa evalua(n) al docente
+		- Decanatura evaulua al docente
 
-> Dependencias del sistema
+3. Crear preguntas
+		Cada pregunta tiene un contenido y un aspecto, por defecto el aspecto puede ser
+		
+		- Conocimiento
+		- Metolodogía
+		- Cumplimiento de Labores
+		- Relaciones Universitarias
 
-> Configuración
+4. Crear aspectos
+		Se pueden crear aspectos para asociarlos a un cierto conjunto de preguntas
 
-> Creación de la base de datos
+5. Crear cursos o materias
+		Los profesores y estudiantes son asignados a un curso o materia como tal. El sistema almacena toda la información del curso
 
-> Inicialización de la base de datos
+6. Administración de Usuarios
+		Se permite la creación de usuarios manualmente o de forma automatizada mediante servicios SOAP
 
-> Para correr la aplicación se ejecuta : rails server
-
-> Servicios ( tareas pendientes, motores de busqueda, etc.)
-
-> Instrucciónes de Desarrollo
-
-# Información
-
-
-The OpenShift `ruby` cartridge documentation can be found at:
-
-http://openshift.github.io/documentation/oo_cartridge_guide.html#ruby
-
-# Contacto
-
-- Ingeniería de Sistemas y Computación
-- Facultad de ingeniería
-- Universidad de Caldas
-- Manizales - Caldas - Colombia
+7. Habilidades y permisos
+		Cada rol asignado a un usuario puede tener diferentes permisos en el sistema y es totalmente configurable

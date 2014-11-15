@@ -34,7 +34,7 @@ SurveyType.create(name: "Director de programa a profesor")
 
 a1 = Aspect.create(name: "Conocimiento")
 a2 = Aspect.create(name: "Metodología")
-a3 = Aspect.create(name: "Cumplimiento de labores")
+a3 = Aspect.create(name: "Cumplimiento de Labores")
 a4 = Aspect.create(name: "Relaciones Universitarias")
 
 #Evaluación al profesor por parte de los estudiantes
