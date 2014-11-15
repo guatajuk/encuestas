@@ -5,16 +5,13 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:details) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @answer_forms.each do |answer_form| %>
       <tr>
-        <td><%= link_to answer_form.id, answer_form_path(answer_form) %></td>
         <td><%= answer_form.details %></td>
         <td><%=l answer_form.created_at %></td>
         <td>
