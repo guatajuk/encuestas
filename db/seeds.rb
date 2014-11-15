@@ -58,7 +58,7 @@ user10.password = "teacher1234"
 user10.add_role "Teacher"
 user10.save
 
-#Courses
+#Inserciones de prueba en Courses
 Course.create(name: "Matemáticas Especiales", course_id: "GF0832", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user5.id])
 Course.create(name: "Matemáticas Discretas", course_id: "GF0832", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user6.id])
 Course.create(name: "Física I", course_id: "GF0827", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user7.id])
@@ -66,6 +66,7 @@ Course.create(name: "Física II", course_id: "GF0828", group: "2", faculty: "Ing
 Course.create(name: "Física III", course_id: "GF0829", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user9.id])
 Course.create(name: "Probabilidad", course_id: "GF0830", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user10.id])
 
+#Tipos de encuesta
 SurveyType.create(name: "Estudiantes a profesor")
 SurveyType.create(name: "Decano a profesor")
 SurveyType.create(name: "Director de programa a profesor")
