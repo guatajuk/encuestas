@@ -7,13 +7,13 @@ user1.save
 user2 = User.new
 user2.email = "julian@seu.com"
 user2.password = "student1234"
-user2.add_role 'Student"'
+user2.add_role "Student"
 user2.save
 
 user3 = User.new
 user3.email = "marcelo@seu.com"
 user3.password = "dean1234"
-user3.add_role 'Dean'
+user3.add_role "Dean"
 user3.save
 
 user4 = User.new
