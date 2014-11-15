@@ -28,6 +28,44 @@ user5.password = "teacher1234"
 user5.add_role "Teacher"
 user5.save
 
+user6 = User.new
+user6.email = "chucho@seu.com"
+user6.password = "teacher1234"
+user6.add_role "Teacher"
+user6.save
+
+user7 = User.new
+user7.email = "martinez@seu.com"
+user7.password = "teacher1234"
+user7.add_role "Teacher"
+user7.save
+
+user8 = User.new
+user8.email = "tigre@seu.com"
+user8.password = "teacher1234"
+user8.add_role "Teacher"
+user8.save
+
+user9 = User.new
+user9.email = "sepulveda@seu.com"
+user9.password = "teacher1234"
+user9.add_role "Teacher"
+user9.save
+
+user10 = User.new
+user10.email = "aranzazu@seu.com"
+user10.password = "teacher1234"
+user10.add_role "Teacher"
+user10.save
+
+#Courses
+Course.create(name: "Matemáticas Especiales", course_id: "GF0832", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user5.id])
+Course.create(name: "Matemáticas Discretas", course_id: "GF0832", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user6.id])
+Course.create(name: "Física I", course_id: "GF0827", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user7.id])
+Course.create(name: "Física II", course_id: "GF0828", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user8.id])
+Course.create(name: "Física III", course_id: "GF0829", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user9.id])
+Course.create(name: "Probabilidad", course_id: "GF0830", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user10.id])
+
 SurveyType.create(name: "Estudiantes a profesor")
 SurveyType.create(name: "Decano a profesor")
 SurveyType.create(name: "Director de programa a profesor")
