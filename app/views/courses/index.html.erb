@@ -10,8 +10,7 @@
       <th><%= model_class.human_attribute_name(:group) %></th>
       <th><%= model_class.human_attribute_name(:year) %></th>
       <th><%= model_class.human_attribute_name(:semester) %></th>
-      <th><%= model_class.human_attribute_name(:faculty) %></th>
-
+      <th><%= model_class.human_attribute_name(:users) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -23,9 +22,13 @@
         <td><%= course.group %></td>
         <td><%= course.year %></td>
         <td><%= course.semester %></td>
-        <td><%= course.faculty %></td>
-        
-
+        <td>
+          <%i = 1%>
+          <% course.users.sort{ |a,b| a.email <=> b.email }.each do |c| %>
+            <dd><strong><%=i%>.</strong> <%= c.email %> - <strong><%= JSON.parse(c.roles.to_json)[0]["name"] %></strong></dd>
+            <%i=i+1%>
+          <% end %>
+        </td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_course_path(course), :class => 'btn btn-mini' %>

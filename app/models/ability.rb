@@ -9,12 +9,12 @@ class Ability
     	
     elsif user.has_role? "Teacher"
 
-    elsif user.has_role? "dean"
-    	can :manage, Survey
+    elsif user.has_role? "Dean"
+    	can :manage, [Survey, SurveyType, Aspect, Question]
+      can [:update, :read], User
     elsif user.has_role? "Director"
     	
     end
-
+    
   end
-
 end

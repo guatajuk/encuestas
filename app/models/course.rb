@@ -1,6 +1,7 @@
 class Course
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Slug
 
   resourcify
   
@@ -11,6 +12,11 @@ class Course
   field :year, type: String
   field :semester, type: String
 
-  belongs_to :user
+  validates_uniqueness_of :course_id, :scope => [:group, :year, :semester]
+  has_and_belongs_to_many :users
+
+  slug history: true do |curs|
+    "#{curs.course_id} #{curs.group}".to_url
+  end
 
 end
