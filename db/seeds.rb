@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 user1 = User.new
 user1.email = "admin@seu.com"
 user1.password = "admin1234"
