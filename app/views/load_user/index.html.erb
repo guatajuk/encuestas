@@ -1,0 +1,15 @@
+<%= form_tag :controller => 'load_user', :action => 'load_soap', :method => 'post' do %>
+
+	<div class="page-header">
+	  <h1>Load users from SOAP service</h1>
+	</div>
+
+	<div class="span3">
+		<div class="controls">
+			<%= label_tag 'user_id', 'User ID' %>
+  		<%= text_field_tag 'user_id' %>
+  		<%= submit_tag "Go"%>
+		</div>
+	</div>
+
+<% end %>

@@ -16,12 +16,15 @@ class UsersController < ApplicationController
   def edit
   end
 
+
+
   def create
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
-          @user.add_role user_params[:role]
-          format.html { redirect_to @user, notice: 'Product type was successfully created.' }
+        create_answer_form(@user)
+        @user.add_role user_params[:role]
+        format.html { redirect_to @user, notice: 'Product type was successfully created.' }
       else
           format.html { render action: 'new' }
       end
@@ -56,7 +59,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit( :name, :email, :id_number, :password, :password_confirmation, :role)
+      params.require(:user).permit(:id_number)
     end
 
 end
