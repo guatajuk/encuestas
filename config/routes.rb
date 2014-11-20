@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :courses
 
   devise_for :users
+
   resources :aspects
 
   get 'principal/index'
@@ -21,6 +22,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'principal#index'
+
+  #get 'load_user', to: 'load_user#index'
+
+  get 'load_user' => 'load_user#index'
+
+  post 'load_user' => 'load_user#load_data'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

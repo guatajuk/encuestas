@@ -9,9 +9,9 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:deadline) %></th>
       <th><%= model_class.human_attribute_name(:survey_type) %></th>
       <th><%= model_class.human_attribute_name(:questions) %></th>
+      <th><%= model_class.human_attribute_name(:active) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -19,7 +19,6 @@
     <% @surveys.each do |survey| %>
       <tr>
         <td><%= survey.name %></td>
-        <td><%= survey.deadline %></td>
         <td><%= survey.survey_type.name %></td>
         <td>
           <%i = 1%>
@@ -28,6 +27,7 @@
             <%i=i+1%>
           <% end %>
         </td>
+        <td><%= survey.active %></td>
 
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

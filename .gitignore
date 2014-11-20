@@ -4,8 +4,10 @@
 *~
 capybara-*.html
 .rspec
+/.openshift
 /log
 /doc
+/config/application.yml
 /tmp
 /db/*.sqlite3
 /public/system
