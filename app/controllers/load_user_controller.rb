@@ -7,7 +7,8 @@ class LoadUserController < ApplicationController
 	def load_data
 		id = params[:user_id]
 		if id.to_i != 0
-			@user = User.create(name: "Ghoul_1", password:"123123123", email: "ghoul1@seu.com", id_number: id)
+			json = create_student (id)
+			@user = User.create(name: json["nom_estudiante"], email: "popo@seu.com", password: json["cod_estudiante"])
 			@user.add_role "Student"
 		else
 			@user = nil
@@ -16,7 +17,7 @@ class LoadUserController < ApplicationController
 	end
 
 	def create_student (id)
-  	client = Savon.client(wsdl: ENV[WE_SERVICE])
+  	client = Savon.client(wsdl: ENV["WEB_SERVICE"])
   	response = client.call(:get_estudiante_clases, message: {codigo: id})
   	noko_doc = Nokogiri::XML(response.to_s)
   	cod_materia = noko_doc.xpath("//COD_MATERIA")
