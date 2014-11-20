@@ -1,4 +1,11 @@
 class ApplicationController < ActionController::Base
+
+  # This code apply a specific template for specific users
+  # based on your role.
+
+  layout :set_layout
+
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
 
@@ -36,5 +43,21 @@ class ApplicationController < ActionController::Base
       controller.send(:add_breadcrumb, name, url)
     end
   end
+
+
+  # -------------------------------------------------- #
+  # Set a specific template for users definied by role #
+  # This capture the role from database                #
+  # -------------------------------------------------- #
+
+  def set_layout
+    if 1==1
+      'application'
+    else
+      'dean'
+    end
+  end
+
+  # -------------------------------------------------- #
 
 end
