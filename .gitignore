@@ -4,6 +4,7 @@
 *~
 capybara-*.html
 .rspec
+/.openshift
 /log
 /doc
 /tmp
