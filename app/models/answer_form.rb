@@ -1,6 +1,6 @@
 class AnswerForm
   include Mongoid::Document
-  include Mongoid::Timestamp
+  include Mongoid::Timestamps
 
   field :details, type: String
 

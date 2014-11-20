@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :courses
 
   devise_for :users
-  
+
   resources :aspects
 
   get 'principal/index'
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   get 'load_user' => 'load_user#index'
 
-  post 'load_soap' => 'load_user#load_soap'
+  post 'load_user' => 'load_user#load_data'
 
 
   # Example of regular route:
