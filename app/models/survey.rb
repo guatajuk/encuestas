@@ -9,7 +9,7 @@ class Survey
   field :deadline, type: Date
 
 	validates_uniqueness_of :name
-	validates_presence_of :name, :deadline
+	validates_presence_of :name
 
   has_many :questions
   belongs_to :survey_type
