@@ -41,7 +41,6 @@
           </a>
           <a class="brand" href="/">SEU</a>
           <div class="container-fluid nav-collapse">
-            <% if user_signed_in? %>
             <ul class="nav pull-right">
               <li><%= link_to t("survey"), "/surveys"  %></li>
               <li><%= link_to t("survey_type"), "/survey_types"  %></li>
@@ -50,7 +49,6 @@
               <li><%= link_to t("course"), "/courses"  %></li>
               <li><%= link_to t("users"), "/users"  %></li>
             </ul>
-            <% end %>
             <ul class="nav pull-right">
               <% if user_signed_in? %>
                 <li>
@@ -66,9 +64,7 @@
         </div>
       </div>
     </div>
-
-    <h1>Default</h1>
-
+    <h1>Decano</h1>
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span">
