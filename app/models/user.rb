@@ -12,6 +12,7 @@ class User
   ## Database authenticatable
   field :name,               type: String
   field :id_number,           type: String
+  
   #Si es estudiante aquí se almacena el codigo
   #Si es profesor aquí se almacena la cedula
 

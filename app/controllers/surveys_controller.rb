@@ -45,7 +45,7 @@ class SurveysController < ApplicationController
     end
 
     def survey_params
-      params.require(:survey).permit(:name, :deadline, :survey_type_id, question_ids: [])
+      params.require(:survey).permit(:name, :active, :survey_type_id, question_ids: [])
     end
     def set_breadcrumb_for cat
       set_breadcrumb_for cat.parent if cat.parent
