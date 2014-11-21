@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Breadcrumb Home Page
-  add_breadcrumb "homepage", :root_path, :class => "Back to the home page"
+  add_breadcrumb "homepage", :root_path, :class => "Back to the home page"  
 
   # Cancan Authorization
   rescue_from CanCan::AccessDenied do |exception|
@@ -25,22 +25,28 @@ class ApplicationController < ActionController::Base
   end
 
   before_filter do
+    add_breadcrumb controller_name, '/'+controller_path
+    if ["new", "create", "edit", "update"].include? action_name
+     add_breadcrumb action_name, action_name
+    end
     resource = controller_name.singularize.to_sym
     method = "#{resource}_params"
     params[resource] &&= send(method) if respond_to?(method, true)
   end
 
+    
+
   # Breadcrumbs Dynamic Setting
   protected
-  def add_breadcrumb name, url = ''
+  def add_breadcrumb name, url = '', options = {}
     @breadcrumbs ||= []
     url = eval(url.to_s) if url =~ /_path|_url|@/
-    @breadcrumbs << [name, url]
+    @breadcrumbs << [name, url, options]
   end
  
   def self.add_breadcrumb name, url, options = {}
     before_filter options do |controller|
-      controller.send(:add_breadcrumb, name, url)
+      controller.send(:add_breadcrumb, name, url, options)
     end
   end
 

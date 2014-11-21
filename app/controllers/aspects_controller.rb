@@ -3,10 +3,6 @@ class AspectsController < ApplicationController
   before_action :set_aspect, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
-  add_breadcrumb "aspect", '/aspects', :title => "Back to aspects"
-  add_breadcrumb "new", '/new', :only => [:new,:create], :title => "Back to new"
-  add_breadcrumb "edit", '/edit', :only => [:edit,:update], :title => "Back to edit"
-
   def index
     @aspects = Aspect.all
     respond_with(@aspects)
@@ -47,9 +43,5 @@ class AspectsController < ApplicationController
 
     def aspect_params
       params.require(:aspect).permit(:name)
-    end
-    def set_breadcrumb_for cat
-      set_breadcrumb_for cat.parent if cat.parent
-      add_breadcrumb cat.name, "category_path(#{cat.id})"
     end
 end

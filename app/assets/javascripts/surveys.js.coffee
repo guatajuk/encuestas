@@ -4,7 +4,7 @@
 
 activado=false
 evaluar=()-> if $('#survey_deadline')? and $('#survey_deadline').datepicker? then activar() else $("#survey_deadline").hover(activar)
-activar=() -> if activado is false then $('#survey_deadline').datepicker() activado = true 
+activar=() -> if activado is false then $('#survey_deadline').datepicker({ dateFormat: 'dd/mm/yy' }) activado = true 
 
 # si se recarga la pagina
 $(document).ready(evaluar)

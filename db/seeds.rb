@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 user1 = User.new
 user1.email = "admin@seu.com"
 user1.password = "admin1234"
@@ -155,3 +156,4 @@ Survey.create!(name: "Ingenierías 2014-2", survey_type_id: st1.id, :question_id
 Survey.create!(name: "Ingenierías 2014-2", survey_type_id: st2.id, :question_ids => [q28.id, q29.id, q30.id, q31.id, q32.id, q33.id, q34.id, q35.id, q36.id, q37.id, q38.id, q39.id, q40.id, q41.id, q42.id, q43.id, q44.id, q45.id, q46.id, q47.id, q48.id, q49.id, q50.id, q51.id, q52.id, q53.id])
 #Evaluaciones predefinidas - Decano a profesor
 Survey.create!(name: "Ingenierías 2014-2", survey_type_id: st3.id, :question_ids => [q54.id, q55.id, q56.id, q57.id, q58.id, q59.id, q60.id, q61.id, q62.id, q63.id, q64.id, q65.id, q66.id, q67.id])
+
