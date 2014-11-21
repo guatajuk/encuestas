@@ -3,8 +3,6 @@ class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
-  respond_to :html
-
   def index
     @courses = Course.all
     respond_with(@courses)
