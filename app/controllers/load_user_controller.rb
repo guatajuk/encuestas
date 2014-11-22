@@ -14,41 +14,31 @@ class LoadUserController < ApplicationController
 					10.times { puts "" }
 					@user = User.create(name: json["nom_estudiante"], email: json["cod_estudiante"]+"@seu.com", password: json["cod_estudiante"], id_number: json["cod_estudiante"])
 					@user.add_role "Student"
-					puts "Creando a #{@user.name}"
 					json["materias"].each do |mat|
 						if !User.where(id_number: mat["cod_profesor"]).exists?
-							5.times { puts "" }
 							user = User.create(name: mat["nom_profesor"], email: mat["cod_profesor"]+"@seu.com", password: mat["cod_profesor"], id_number: mat["cod_profesor"])
 							user.add_role "Teacher"
-							puts "Creando a #{user.name}"
 						end
 						if !Course.where(course_id: mat["cod_materia"], gruop: mat["grupo"]).exists?
-							5.times { puts "" }
 							Course.create(name: mat["nom_materia"], course_id: mat["cod_materia"], group: mat["grupo"], faculty: mat["nom_facultad"], year: mat["ano"], semester: mat["periodo"])
-							puts "Creando curso #{mat["nom_materia"]}"
 						end
 						if !Course.where(course_id: mat["cod_materia"], user_ids: @user.id_number).exists?
-							5.times { puts "" }
 							Course.where(course_id: mat["cod_materia"]).push(user_ids: @user.id)
-							puts "Asociando al usuario #{@user.id_number} al grupo #{mat["nom_materia"]}"
+						end
+						if !Course.where(course_id: mat["cod_materia"], user_ids: mat["cod_profesor"]).exists?
+							Course.where(course_id: mat["cod_materia"]).push(user_ids: JSON.parse(User.where(id_number: mat["cod_profesor"]).to_json)[0]["_id"]["$oid"])
 						end
 					end
 				else
-					5.times { puts "" }
-					puts "Ya existe el estudiante en la base de datos"
-					5.times { puts "" }
+					#Ya existe el estudiante en la base de datos
 					@user = nil
 				end
 			else 
-				5.times { puts "" }
-				puts "No se encontró el usuario en la base de datos"
-				5.times { puts "" }
+				#El codigo no corresponde a un estudiante en la base de datos				
 				@user = nil
 			end
 		else
-			5.times { puts "" }
-			puts "Se ingresó un código inválido"
-			5.times { puts "" }
+			#Se ingresó un código inválido
 			@user = nil 
 		end 
 		@user
