@@ -10,14 +10,36 @@ class LoadUserController < ApplicationController
 		if id.to_i != 0
 			json = create_student (id)
 			if json != nil
-				@user = User.create(name: json["nom_estudiante"], email: json["cod_estudiante"]+"@seu.com", password: json["cod_estudiante"], id_number: json["cod_estudiante"])
-				@user.add_role "Student"
-			else
-				puts "ERROR"
+				if !User.where(id_number: json["cod_estudiante"]).exists?
+					@user = User.create(name: json["nom_estudiante"], email: json["cod_estudiante"]+"@seu.com", password: json["cod_estudiante"], id_number: json["cod_estudiante"])
+					@user.add_role "Student"
+					json["materias"].each do |mat|
+						if !User.where(id_number: mat["cod_profesor"]).exists?
+							user = User.create(name: mat["nom_profesor"], email: mat["cod_profesor"]+"@seu.com", password: mat["cod_profesor"], id_number: mat["cod_profesor"])
+							user.add_role "Teacher"
+						end
+						if !Course.where(course_id: mat["cod_materia"], gruop: mat["grupo"]).exists?
+							Course.create(name: mat["nom_materia"], course_id: mat["cod_materia"], group: mat["grupo"], faculty: mat["nom_facultad"], year: mat["ano"], semester: mat["periodo"])
+						end
+					end
+				else
+					5.times { puts "" }
+					puts "Ya existe el estudiante en la base de datos"
+					5.times { puts "" }
+					@user = nil
+				end
+			else 
+				5.times { puts "" }
+				puts "No se encontró el usuario en la base de datos"
+				5.times { puts "" }
+				@user = nil
 			end
 		else
-			@user = nil
-		end
+			5.times { puts "" }
+			puts "Se ingresó un código inválido"
+			5.times { puts "" }
+			@user = nil 
+		end 
 		@user
 	end
 
@@ -45,15 +67,15 @@ class LoadUserController < ApplicationController
 	  		json_S = json_S + "},\n"
 			end
 			json_S = json_S + "{\n"
-			json_S = json_S + "\"nom_materia\": \""+noko_doc.xpath("//NOM_MATERIA")[index].text.upcase+"\",\n"
-			json_S = json_S + "\"cod_materia\": \""+noko_doc.xpath("//COD_MATERIA")[index].text.upcase+"\",\n"
-			json_S = json_S + "\"nom_facultad\": \""+noko_doc.xpath("//NOM_FACULTAD")[index].text.upcase+"\",\n"
-			json_S = json_S + "\"cod_facultad\": \""+noko_doc.xpath("//COD_FACULTAD")[index].text.upcase+"\",\n"
-			json_S = json_S + "\"grupo\": \""+noko_doc.xpath("//GRUPO")[index].text.upcase+"\",\n"
-			json_S = json_S + "\"periodo\": \""+noko_doc.xpath("//PERIODO")[index].text.upcase+"\",\n"
-			json_S = json_S + "\"ano\": \""+noko_doc.xpath("//ANO")[index].text.upcase+"\",\n"
-			json_S = json_S + "\"nom_profesor\": \""+noko_doc.xpath("//NOM_PROFESOR")[index].text.upcase+"\",\n"
-			json_S = json_S + "\"cod_profesor\": \""+noko_doc.xpath("//COD_PROFESOR")[index].text.upcase+"\"\n"
+			json_S = json_S + "\"nom_materia\": \""+noko_doc.xpath("//NOM_MATERIA")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\",\n"
+			json_S = json_S + "\"cod_materia\": \""+noko_doc.xpath("//COD_MATERIA")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\",\n"
+			json_S = json_S + "\"nom_facultad\": \""+noko_doc.xpath("//NOM_FACULTAD")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\",\n"
+			json_S = json_S + "\"cod_facultad\": \""+noko_doc.xpath("//COD_FACULTAD")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\",\n"
+			json_S = json_S + "\"grupo\": \""+noko_doc.xpath("//GRUPO")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\",\n"
+			json_S = json_S + "\"periodo\": \""+noko_doc.xpath("//PERIODO")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\",\n"
+			json_S = json_S + "\"ano\": \""+noko_doc.xpath("//ANO")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\",\n"
+			json_S = json_S + "\"nom_profesor\": \""+noko_doc.xpath("//NOM_PROFESOR")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\",\n"
+			json_S = json_S + "\"cod_profesor\": \""+noko_doc.xpath("//COD_PROFESOR")[noko_doc.xpath("//NOM_MATERIA").size-1].text.upcase+"\"\n"
 			json_S = json_S + "}\n"
 			json_S = json_S + "]\n"
 			json_S = json_S + "}\n"
