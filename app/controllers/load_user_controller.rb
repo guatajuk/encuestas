@@ -8,18 +8,29 @@ class LoadUserController < ApplicationController
 	def load_data
 		id = params[:user_id]
 		if id.to_i != 0
-			json = create_student (id)
+			json = create_json (id)
 			if json != nil
 				if !User.where(id_number: json["cod_estudiante"]).exists?
+					10.times { puts "" }
 					@user = User.create(name: json["nom_estudiante"], email: json["cod_estudiante"]+"@seu.com", password: json["cod_estudiante"], id_number: json["cod_estudiante"])
 					@user.add_role "Student"
+					puts "Creando a #{@user.name}"
 					json["materias"].each do |mat|
 						if !User.where(id_number: mat["cod_profesor"]).exists?
+							5.times { puts "" }
 							user = User.create(name: mat["nom_profesor"], email: mat["cod_profesor"]+"@seu.com", password: mat["cod_profesor"], id_number: mat["cod_profesor"])
 							user.add_role "Teacher"
+							puts "Creando a #{user.name}"
 						end
 						if !Course.where(course_id: mat["cod_materia"], gruop: mat["grupo"]).exists?
+							5.times { puts "" }
 							Course.create(name: mat["nom_materia"], course_id: mat["cod_materia"], group: mat["grupo"], faculty: mat["nom_facultad"], year: mat["ano"], semester: mat["periodo"])
+							puts "Creando curso #{mat["nom_materia"]}"
+						end
+						if !Course.where(course_id: mat["cod_materia"], user_ids: @user.id_number).exists?
+							5.times { puts "" }
+							Course.where(course_id: mat["cod_materia"]).push(user_ids: @user.id)
+							puts "Asociando al usuario #{@user.id_number} al grupo #{mat["nom_materia"]}"
 						end
 					end
 				else
@@ -43,7 +54,7 @@ class LoadUserController < ApplicationController
 		@user
 	end
 
-	def create_student (id)
+	def create_json (id)
   	client = Savon.client(wsdl: ENV["WEB_SERVICE"])
   	response = client.call(:get_estudiante_clases, message: {codigo: id})
   	noko_doc = Nokogiri::XML(response.to_s)

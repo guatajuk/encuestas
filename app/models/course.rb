@@ -12,7 +12,7 @@ class Course
   field :year, type: String
   field :semester, type: String
 
-  #validates_uniqueness_of :course_id, :scope => [:group, :year, :semester]
+  validates_uniqueness_of :course_id, :scope => [:group, :year, :semester]
   has_and_belongs_to_many :users
 
   slug history: true do |curs|

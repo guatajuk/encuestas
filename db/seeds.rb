@@ -60,7 +60,7 @@ user10.add_role "Teacher"
 user10.save
 
 #Inserciones de prueba en Courses
-Course.create!(name: "Matemáticas Especiales", course_id: "GF0832", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user5.id])
+Course.create!(name: "Matemáticas Especiales", course_id: "GF0831", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user5.id])
 Course.create!(name: "Matemáticas Discretas", course_id: "GF0832", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user6.id])
 Course.create!(name: "Física I", course_id: "GF0827", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user7.id])
 Course.create!(name: "Física II", course_id: "GF0828", group: "2", faculty: "Ingeniería", year: "2014", semester: "2", :user_ids => [user2.id, user8.id])
