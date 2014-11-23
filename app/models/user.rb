@@ -34,7 +34,6 @@ class User
   field :last_sign_in_ip,    type: String
 
   has_and_belongs_to_many :courses
-  has_and_belongs_to_many :surveys
 
   ## Confirmable
   # field :confirmation_token,   type: String
