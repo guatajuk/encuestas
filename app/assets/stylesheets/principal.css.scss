@@ -210,13 +210,41 @@ a.current-page, a.current-page:hover {
                                        background-color:white;
 }
 
-#separador {
-    color: rgb(183, 177, 217);
-    display: inline;
-    width: 10px;
-}
+	#separador {
+	    color: rgb(183, 177, 217);
+	        display: inline;
+		    width: 10px;
+		    }
 
 
-.page-header {
-     margin: 20px 0 0;
-}
+		    .page-header {
+		         margin: 20px 0 0;
+			 }
+
+			 #logo{
+			 font-family: 'Orbitron', sans-serif; /* font style. Default uses Google fonts */
+			 text-shadow: 2px 2px #B4EAF3, 3px 3px #B4EAF3, 4px 4px #B4EAF3, 5px 5px #B4EAF3, 6px 6px #B4EAF3;
+			 font-size: 64px; /* font size of text */
+			 color: #207688;
+			 letter-spacing: 14px;
+			 line-height : 60px;
+			 font-weight: 800;
+			 text-transform: uppercase;
+			 position: relative;
+			 cursor: pointer;
+			 }
+
+			 #logo span{
+			 display: inline-block;
+			 }
+
+			 .dropped span{
+			 -moz-transform: translateY(300px) rotateZ(120deg); /* rotate, translate, and disappear */
+			 -webkit-transform: translateY(300px) rotateZ(120deg);
+			 transform: translateY(300px) rotateZ(120deg);
+			 opacity: 0;
+			 -moz-transition: all 0.3s ease-in;
+			 -webkit-transition: all 0.3s ease-in;
+			 -ms-transition: all 0.3s ease-in;
+			 transition: all 0.3s ease-in;
+			 }
