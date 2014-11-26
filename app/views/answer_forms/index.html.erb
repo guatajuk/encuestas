@@ -15,7 +15,11 @@
     <% @answer_forms.each do |answer_form| %>
       <tr>
         <td><%= answer_form.course.name %></td>
-        <td><%= answer_form.user_ids %></td>
+        <% answer_form.user_ids.each do |user| %>
+          <% if JSON.parse(User.find(user).roles.to_json)[0]["name"] == "Teacher" %>
+            <td><%= User.find(user).name %></td>
+          <% end %>
+        <% end %>
         <td><%= answer_form.survey.name %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -25,7 +29,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_answer_form_path,
-            :class => 'btn btn-primary' %>
