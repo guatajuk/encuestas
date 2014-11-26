@@ -25,6 +25,9 @@ function move(elem) {
 	 $(this).css({transitionDelay: '0ms'}) // set transition delay to 0 so when 'dropped' class is removed, letter appears instantly
        })
        logoHeader.removeClass('dropped') // remove class at the "end" to reset header.
+	 $(logoHeader).hide();
+	 $(logoHeader).fadeIn();
+	 
        delay = 0
      }, durationTime) // 1800 is just rough estimate of time transition will finish, not the best way
    })
