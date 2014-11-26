@@ -31,7 +31,7 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
-    <div class="navbar navbar-fluid-top">
+    <div class="navbar navbar-fluid-top navbar-inverse">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
@@ -44,6 +44,7 @@
             <% if user_signed_in? %>
             <ul class="nav pull-right">
               <li><%= link_to "Load User", "/load_user"  %></li>
+              <li><%= link_to "Answer Form", "/answer_forms"  %></li>
               <li><%= link_to t("survey"), "/surveys"  %></li>
               <li><%= link_to t("survey_type"), "/survey_types"  %></li>
               <li><%= link_to t("aspect"), "/aspects"  %></li>
@@ -75,7 +76,7 @@
         <div class="span11">
           <div class="nav pull-right"> 
             <% if user_signed_in? %>
-             <%= t('welcome') %>, <strong><%= current_user.email %></strong>
+             <%= t('welcome_back!') %>, <strong><%= current_user.email %></strong>
             <% end %>
           </div>
           <%= bootstrap_flash %>

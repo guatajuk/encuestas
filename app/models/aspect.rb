@@ -13,5 +13,5 @@ class Aspect
   has_many :questions
 
   slug :name, :history => true
-
+  
 end

@@ -1,7 +1,7 @@
 class AnswerFormsController < ApplicationController
   before_action :set_answer_form, only: [:show, :edit, :update, :destroy]
-
-  respond_to :html
+  respond_to :html, :xml, :json
+  load_and_authorize_resource
 
   def index
     @answer_forms = AnswerForm.all
@@ -42,6 +42,6 @@ class AnswerFormsController < ApplicationController
     end
 
     def answer_form_params
-      params.require(:answer_form).permit(:details)
+      params.require(:answer_form).permit(:details, :course_id, :survey_id, user_ids: [])
     end
 end

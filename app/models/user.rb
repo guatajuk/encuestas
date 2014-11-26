@@ -1,6 +1,6 @@
 class User
   include Mongoid::Document
-
+  include Mongoid::Slug
   attr_accessor :role
   
   rolify
@@ -34,7 +34,8 @@ class User
   field :last_sign_in_ip,    type: String
 
   has_and_belongs_to_many :courses
-  has_and_belongs_to_many :surveys
+
+  slug :id_number, :history => true
 
   ## Confirmable
   # field :confirmation_token,   type: String
