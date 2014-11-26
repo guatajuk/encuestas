@@ -25,7 +25,7 @@ gem 'spring', '~> 1.1.3'
 gem 'mongoid', '~> 4.0.0'
 
 # Bootstrap Gem
-gem 'twitter-bootstrap-rails', '~> 3.2.0'
+gem 'twitter-bootstrap-rails', '~> 2.2.8'
 
 # Devise
 gem 'devise', '~> 3.4.0'

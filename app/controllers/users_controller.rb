@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  respond_to :html, :xml, :json
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
@@ -20,7 +21,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
-        create_answer_form(@user)
         @user.add_role user_params[:role]
         format.html { redirect_to @user, notice: 'Product type was successfully created.' }
       else
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:id_number)
+      params.require(:user).permit(:id_number, :email, :password, :name)
     end
 
 end
