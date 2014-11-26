@@ -2,7 +2,7 @@
 user1 = User.new
 user1.email = "admin@seu.com"
 user1.password = "admin1234"
-user1.add_role 'Admin'
+user1.add_role "Admin"
 user1.save
 
 #Tipos de encuesta
