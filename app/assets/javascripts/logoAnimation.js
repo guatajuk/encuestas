@@ -1,4 +1,4 @@
-$(function(){
+
 
 function move(elem) {
    var logoName="Sistema de Evaluación Universitario";
@@ -41,6 +41,5 @@ function move(elem) {
 
 
  }
- move($("#logo"));
+// move($("#logo"));
 
-});
