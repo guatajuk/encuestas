@@ -226,7 +226,7 @@ a.current-page, a.current-page:hover {
 			 text-shadow: 2px 2px #B4EAF3, 3px 3px #B4EAF3, 4px 4px #B4EAF3, 5px 5px #B4EAF3, 6px 6px #B4EAF3;
 			 font-size: 64px; /* font size of text */
 			 color: #207688;
-			 letter-spacing: 14px;
+			 letter-spacing: 10px;
 			 line-height : 60px;
 			 font-weight: 800;
 			 text-transform: uppercase;
@@ -248,3 +248,9 @@ a.current-page, a.current-page:hover {
 			 -ms-transition: all 0.3s ease-in;
 			 transition: all 0.3s ease-in;
 			 }
+
+
+.space
+{
+ opacity:0;
+}			 

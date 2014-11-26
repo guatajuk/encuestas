@@ -1,14 +1,21 @@
 $(function(){
 
 function move(elem) {
-   var logoName="Sistema   de   Evaluación Universitario";
+   var logoName="Sistema de Evaluación Universitario";
 
    var durationTime=3900;
    var logoHeader = elem;
    var output="";
    for(indx in logoName)
    {
-     output+="<span class=\"charx\">"+logoName[indx]+"</span>";
+       var character=logoName[indx];
+       if(character===' ')
+       {
+	   output+="<span class=\"charx space\">_</span>";	   
+       }else
+       {
+	   output+="<span class=\"charx\">"+character+"</span>";	   
+       }
    }
    $(logoHeader).html(output);
    //logoHeader.lettering() // wrap <span class="charx"/ > around each character within header
