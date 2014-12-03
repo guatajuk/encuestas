@@ -1,4 +1,28 @@
 <%= form_for @answer_form, :html => { :class => 'form-horizontal' } do |f| %>
+
+   <table class="table table-striped"> 
+    <thead>
+      <tr>
+        <th><%= label_tag "questions" %></th>
+        <th><%= label_tag "answers" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @answer_form.survey.questions.each do |a| %>
+        <tr>
+          <td><%= a.item %></td>
+          <td>
+            <div class="form_row">
+              <% [ 'E', 'B', 'R', 'M' ].each do |choice| %>
+               <%= radio_button_tag 'choice', choice %>
+              <% end %>
+            </div>
+          </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+    
   <div class="control-group">
     <%= f.label :details, :class => 'control-label' %>
     <div class="controls">
