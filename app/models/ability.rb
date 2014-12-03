@@ -6,9 +6,9 @@ class Ability
     if user.has_role? "Admin"
         can :manage, :all
     elsif user.has_role? "Student"
-    	
+    	can [:update, :read], AnswerForm
     elsif user.has_role? "Teacher"
-
+        
     elsif user.has_role? "Dean"
     	can :manage, [Survey, SurveyType, Aspect, Question]
       can [:update, :read], User

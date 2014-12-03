@@ -13,7 +13,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @answer_forms.each do |answer_form| %>
+    <% @answer_forms.where(user_ids: current_user.id).each do |answer_form| %>
       <tr>
         <td><%= answer_form.course.name %></td>
         <% answer_form.user_ids.each do |user| %>
