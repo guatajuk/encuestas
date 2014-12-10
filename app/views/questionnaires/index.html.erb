@@ -1,4 +1,4 @@
-<%- model_class = AnswerForm -%>
+<%- model_class = Questionnaire -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
@@ -13,18 +13,18 @@
     </tr>
   </thead>
   <tbody>
-    <% @answer_forms.where(user_ids: current_user.id).each do |answer_form| %>
+    <% @questionnaires.where(user_ids: current_user.id).each do |questionnaire| %>
       <tr>
-        <td><%= answer_form.course.name %></td>
-        <% answer_form.user_ids.each do |user| %>
+        <td><%= questionnaire.course.name %></td>
+        <% questionnaire.user_ids.each do |user| %>
           <% if JSON.parse(User.find(user).roles.to_json)[0]["name"] == "Teacher" %>
             <td><%= User.find(user).name %></td>
           <% end %>
         <% end %>
-        <td><%= answer_form.survey_id %></td>
+        <td><%= questionnaire.survey_id %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_answer_form_path(answer_form), :class => 'btn btn-mini' %>
+                      edit_questionnaire_path(questionnaire), :class => 'btn btn-mini' %>
         </td>
       </tr>
     <% end %>

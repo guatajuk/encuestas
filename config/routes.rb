@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :answer_forms
+  resources :questionnaires
 
   resources :courses
 

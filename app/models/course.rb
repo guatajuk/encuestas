@@ -14,7 +14,7 @@ class Course
 
   validates_uniqueness_of :course_id, :scope => [:group, :year, :semester]
   has_and_belongs_to_many :users
-  has_many :answer_forms
+  has_many :questionnaires
 
   slug history: true do |curs|
     "#{curs.course_id} #{curs.group}".to_url

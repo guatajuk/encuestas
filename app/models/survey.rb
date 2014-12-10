@@ -12,7 +12,7 @@ class Survey
 
   has_many :questions
   belongs_to :survey_type
-  has_many :answer_form
+  has_many :questionnaire
   has_and_belongs_to_many :users
 
 	#slug history: true do |surv|

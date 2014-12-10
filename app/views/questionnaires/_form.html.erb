@@ -1,12 +1,8 @@
-<%= form_for @answer_form, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @questionnaire, :html => { :class => 'form-horizontal' } do |f| %>
 
   <strong><%= label_tag "Teacher " %></strong> 
-  <%= User.find(@answer_form.user_ids.first).name %>
+  <%= User.find(@questionnaire.user_ids.first).name %>
   <br><br>
-
-  <%= f.fields_for :survey do |builder| %>
-    <%= render 'survey_fields', f: builder %>
-  <% end %>
 
   <div class="control-group">
     <%= f.label :details, :class => 'control-label' %>
@@ -18,6 +14,6 @@
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                answer_forms_path, :class => 'btn' %>
+                questionnaires_path, :class => 'btn' %>
   </div>
 <% end %>
