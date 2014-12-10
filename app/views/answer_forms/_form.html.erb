@@ -2,29 +2,16 @@
 
   <strong><%= label_tag "Teacher " %></strong> 
   <%= User.find(@answer_form.user_ids.first).name %>
+  <br><br>
 
-   <table class="table table-striped"> 
-    <thead>
-      <tr>
-        <th><%= label_tag "questions" %></th>
-        <th><%= label_tag "answers" %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @answer_form.survey.questions.each do |a| %>
-        <tr>
-          <td><%= a.item %></td>
-          <td>
-            <div class="form_row">
-              <% [ 'E', 'B', 'R', 'M' ].each do |choice| %>
-               <%= radio_button_tag 'choice', choice %>
-              <% end %>
-            </div>
-          </td>
-        <% end %>
-      </tr>
-    </tbody>
-  </table>
+  <%= f.fields_for :survey do |builder| %>
+    <div class="control-group">
+      <%= builder.label :name, :class => 'control-label' %>
+      <div class="controls">
+        <%= builder.text_field :name, :class => 'text_field' %>
+      </div>
+    </div>
+  <% end %>
     
   <div class="control-group">
     <%= f.label :details, :class => 'control-label' %>

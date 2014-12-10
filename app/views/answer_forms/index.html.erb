@@ -21,7 +21,7 @@
             <td><%= User.find(user).name %></td>
           <% end %>
         <% end %>
-        <td><%= answer_form.survey.name %></td>
+        <td><%= answer_form.survey_id %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_answer_form_path(answer_form), :class => 'btn btn-mini' %>
