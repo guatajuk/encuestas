@@ -5,12 +5,7 @@
   <br><br>
 
   <%= f.fields_for :survey do |builder| %>
-    <div class="control-group">
-      <%= builder.label :name, :class => 'control-label' %>
-      <div class="controls">
-        <%= builder.text_field :name, :class => 'text_field' %>
-      </div>
-    </div>
+    <%= render 'survey_fields', f: builder %>
   <% end %>
     
   <div class="control-group">
