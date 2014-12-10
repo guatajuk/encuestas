@@ -43,6 +43,8 @@ class AnswerFormsController < ApplicationController
 
     def answer_form_params
       params.require(:answer_form).permit(:details, :course_id, :survey_id, user_ids: [],
-                                          survey_attributes: [:id, :name, :active])
+                                          survey_attributes: [:id, :name, :active,
+                                            questions_attributes: [:id, :item]
+                                          ])
     end
 end

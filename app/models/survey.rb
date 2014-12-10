@@ -20,4 +20,6 @@ class Survey
   #end
   #slug :name, :history => true
 
+  accepts_nested_attributes_for :questions
+
 end
