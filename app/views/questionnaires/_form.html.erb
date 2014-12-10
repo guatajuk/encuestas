@@ -4,10 +4,14 @@
   <%= User.find(@questionnaire.user_ids.first).name %>
   <br><br>
 
+  <%= f.fields_for :survey do |builder| %>
+    <%= render 'survey_fields', f: builder %>
+  <% end %>
+
   <div class="control-group">
-    <%= f.label :details, :class => 'control-label' %>
+    <%= f.label :detail, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :details, :class => 'text_field' %>
+      <%= f.text_field :detail, :class => 'text_field' %>
     </div>
   </div>
 
