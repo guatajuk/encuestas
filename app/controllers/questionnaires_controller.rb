@@ -29,6 +29,9 @@ class QuestionnairesController < ApplicationController
   def update
     @questionnaire.update(questionnaire_params)
     respond_with(@questionnaire)
+    10.times {puts "" }
+    puts questionnaire_params
+    10.times {puts "" }
   end
 
   def destroy
@@ -45,7 +48,7 @@ class QuestionnairesController < ApplicationController
       params.require(:questionnaire).permit(:detail, :course_id, :survey_id, user_ids: [],
                                             survey_attributes: [:id, :name, :active,
                                               questions_attributes: [:id, :item,
-                                                answers_attributes: [:id, :answerField, :question_id]
+                                                answers_attributes: [:id, :answerField]
                                               ]
                                             ])
     end
