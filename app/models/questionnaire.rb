@@ -6,7 +6,6 @@ class Questionnaire
 
   field :detail, type: String
 
-  has_and_belongs_to_many :users
   belongs_to :survey
   belongs_to :course
 
