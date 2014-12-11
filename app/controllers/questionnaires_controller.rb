@@ -44,7 +44,9 @@ class QuestionnairesController < ApplicationController
     def questionnaire_params
       params.require(:questionnaire).permit(:detail, :course_id, :survey_id, user_ids: [],
                                             survey_attributes: [:id, :name, :active,
-                                              questions_attributes: [:id, :item]
+                                              questions_attributes: [:id, :item,
+                                                answers_attributes: [:id, :answerField, :question_id]
+                                              ]
                                             ])
     end
 end
