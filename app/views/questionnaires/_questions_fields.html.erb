@@ -1,4 +1,7 @@
 <fieldset>
 	<%= f.label :item %>
 	<%= f.text_area :item %>
+	<%= f.fields_for :answers do |builder| %>
+    <%= render 'answers_fields', f: builder %>
+  <% end %>
 </fieldset>

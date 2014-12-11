@@ -13,4 +13,6 @@ class Question
   belongs_to :aspect
   belongs_to :survey
 
+  accepts_nested_attributes_for :answers
+
 end

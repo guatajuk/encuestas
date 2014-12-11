@@ -8,6 +8,11 @@ class Ability
     elsif user.has_role? "Student"
     	can [:update, :read], Questionnaire
     elsif user.has_role? "Teacher"
+
+
+
+
+
         
     elsif user.has_role? "Dean"
     	can :manage, [Survey, SurveyType, Aspect, Question]
