@@ -1,0 +1,91 @@
+<% if @permitido=="y"%>
+  
+
+
+<h1>Listing ques</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>q1</th>
+      <th>q2</th>
+      <th>q3</th>
+      <th>q4</th>
+      <th>q5</th>
+      <th>q6</th>
+      <th>q7</th>
+      <th>q8</th>
+      <th>q9</th>
+      <th>q10</th>
+      <th>q11</th>
+      <th>q12</th>
+      <th>q13</th>
+      <th>q14</th>
+      <th>q15</th>
+      <th>q16</th>
+      <th>q17</th>
+      <th>q18</th>
+      <th>q19</th>
+      <th>q20</th>
+      <th>q21</th>
+      <th>q22</th>
+      <th>q23</th>
+      <th>q24</th>
+      <th>q25</th>
+      <th>q26</th>
+      <th>q27</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ques.each do |que| %>
+      <tr>
+        <td><%= que.type %></td>
+        <td><%= que.q1 %></td>
+        <td><%= que.q2 %></td>
+        <td><%= que.q3 %></td>
+        <td><%= que.q4 %></td>
+        <td><%= que.q5 %></td>
+        <td><%= que.q6 %></td>
+        <td><%= que.q7 %></td>
+        <td><%= que.q8 %></td>
+        <td><%= que.q9 %></td>
+        <td><%= que.q10 %></td>
+        <td><%= que.q11 %></td>
+        <td><%= que.q12 %></td>
+        <td><%= que.q13 %></td>
+        <td><%= que.q14 %></td>
+        <td><%= que.q15 %></td>
+        <td><%= que.q16 %></td>
+        <td><%= que.q17 %></td>
+        <td><%= que.q18 %></td>
+        <td><%= que.q19 %></td>
+        <td><%= que.q20 %></td>
+        <td><%= que.q21 %></td>
+        <td><%= que.q22 %></td>
+        <td><%= que.q23 %></td>
+        <td><%= que.q24 %></td>
+        <td><%= que.q25 %></td>
+        <td><%= que.q26 %></td>
+        <td><%= que.q27 %></td>
+        <td><%= link_to 'Show', que %></td>
+        <td><%= link_to 'Edit', edit_que_path(que) %></td>
+        <td><%= link_to 'Destroy', que, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New que', new_que_path %>
+
+<%elsif @permitido=="n"%>
+
+<h2>Lo sentimos: Este formulario solo puede ser accedido desde la universidad</h3>
+<br>
+<h1>Gracias.</h2>
+  
+
+<%end%>

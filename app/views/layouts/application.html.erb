@@ -43,15 +43,33 @@
           <div class="container-fluid nav-collapse">
             <ul class="nav pull-right">
               <% if user_signed_in? %>
-                <li><%= link_to "Load User", "/load_user"  %></li>
-                <li><%= link_to "Questionnaire", "/questionnaires"  %></li>
-                <li><%= link_to t("survey"), "/surveys"  %></li>
-                <li><%= link_to t("survey_type"), "/survey_types"  %></li>
-                <li><%= link_to t("aspect"), "/aspects"  %></li>
-                <li><%= link_to t("question"), "/questions"  %></li>
-                <li><%= link_to t("course"), "/courses"  %></li>
-                <li><%= link_to t("users"), "/users"  %></li>
-                <li><%= link_to(t('logout'), destroy_user_session_path, :method => :delete) %><li>
+                <% if current_user.role_ids.join(",")=="546964bd53525234ef060000" #dean%>
+                  <li><%= link_to "Questionnaire Dean", "/ques"  %></li>
+                  <li><%= link_to(t('logout'), destroy_user_session_path, :method => :delete) %><li>
+                <% end %> 
+                <% if current_user.role_ids.join(",")=="546964bc53525234ef030000" #admin%>
+                  <li><%= link_to "Load User", "/load_user"  %></li>
+                  <li><%= link_to "Questionnaire", "/questionnaires"  %></li>
+                  <li><%= link_to t("survey"), "/surveys"  %></li>
+                  <li><%= link_to t("survey_type"), "/survey_types"  %></li>
+                  <li><%= link_to t("aspect"), "/aspects"  %></li>
+                  <li><%= link_to t("question"), "/questions"  %></li>
+                  <li><%= link_to t("course"), "/courses"  %></li>
+                  <li><%= link_to t("users"), "/users"  %></li>
+                  <li><%= link_to(t('logout'), destroy_user_session_path, :method => :delete) %><li>
+                <% end %>  
+                <% if current_user.role_ids.join(",")=="546964be53525234ef0a0000" #profe%>
+                  <li><%= link_to "Questionnaire", "/questionnaires"  %></li>
+                  <li><%= link_to(t('logout'), destroy_user_session_path, :method => :delete) %><li>
+                <% end %>
+                <% if current_user.role_ids.join(",")=="546964bd53525234ef080000" #dir prog%>
+                  <li><%= link_to "Questionnaire Director", "/ques"  %></li>
+                  <li><%= link_to(t('logout'), destroy_user_session_path, :method => :delete) %><li>
+                <% end %> 
+                <% if current_user.role_ids.join(",")=="546963d053525234ef010000" #estu%>
+                  <li><%= link_to "Questionnaire", "/questionnaires"  %></li>
+                  <li><%= link_to(t('logout'), destroy_user_session_path, :method => :delete) %><li>
+                <% end %> 
               <% else %>
                 <li>
                   <%= link_to(t('login'), new_user_session_path)  %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ques
+
   resources :questionnaires
 
   resources :courses

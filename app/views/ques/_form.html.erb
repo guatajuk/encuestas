@@ -1,0 +1,138 @@
+
+<%= form_for(@que) do |f| %>
+  <% if @que.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@que.errors.count, "error") %> prohibited this que from being saved:</h2>
+
+      <ul>
+      <% @que.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <% if current_user.role_ids.join(",")=="546964bd53525234ef060000" #dean%>
+       <div class="field">
+         <%= f.hidden_field :type, :value => "Dean" %>
+       </div>           
+  <% end %> 
+  <% if current_user.role_ids.join(",")=="546964bd53525234ef080000" #dir prog%>
+          <div class="field">
+            <%= f.hidden_field :type, :value => "Director" %>
+          </div>       
+  <% end %> 
+  
+  <div class="field">
+    <%= f.label :q1 %>
+    <%= f.select :q1, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q2 %>
+    <%= f.select :q2, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q3 %>
+    <%= f.select :q3, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q4 %>
+    <%= f.select :q4, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q5 %>
+    <%= f.select :q5, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q6 %>
+    <%= f.select :q6, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q7 %>
+    <%= f.select :q7, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q8 %>
+    <%= f.select :q8, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q9 %>
+    <%= f.select :q9, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q10 %>
+    <%= f.select :q10, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q11 %>
+    <%= f.select :q11, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q12 %>
+    <%= f.select :q12, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q13 %>
+    <%= f.select :q13, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q14 %>
+    <%= f.select :q14, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q15 %>
+    <%= f.select :q15, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q16 %>
+    <%= f.select :q16, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q17 %>
+    <%= f.select :q17, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q18 %>
+    <%= f.select :q18, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q19 %>
+    <%= f.select :q19, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q20 %>
+    <%= f.select :q20, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q21 %>
+    <%= f.select :q21, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q22 %>
+    <%= f.select :q22, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q23 %>
+    <%= f.select :q23, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q24 %>
+    <%= f.select :q24, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q25 %>
+    <%= f.select :q25, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q26 %>
+    <%= f.select :q26, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :q27 %>
+    <%= f.select :q27, options_for_select([["E", "E"], ["B", "B"],["R", "R"],["M", "M"]]) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
