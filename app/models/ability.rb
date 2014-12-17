@@ -13,7 +13,8 @@ class Ability
     	can :manage, [Survey, SurveyType, Aspect, Question]
       can [:update, :read], User
     elsif user.has_role? "Director"
-    	
+      
+      can [:update, :read], Questionnaire
     end
     
   end
